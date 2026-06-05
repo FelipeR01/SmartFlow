@@ -36,17 +36,20 @@ Este projeto foi desenvolvido focado em alta performance visual sem dependência
 *   **CSS3 (Custom Properties / Grid):** Design System baseado em variáveis, interface "Dark Mode" estilo SaaS corporativo e Glassmorphism.
 *   **JavaScript (Vanilla ES6):** Controle de navegação das abas e execução da lógica interativa do Simulador em tempo real.
 
+## 📂 Estrutura do Repositório
 
+Abaixo, a organização dos arquivos deste projeto:
+
+```text
 smartflow-fiap/
 │
-├── index.html           # Arquivo principal (o código do seu site com as 5 abas)
-├── style.css            # Seu arquivo de estilos (CSS) com o design Dark Mode
-├── script.js            # Seu arquivo JavaScript com a lógica do simulador e abas
+├── index.html           # Arquivo principal (código HTML do site)
+├── style.css            # Arquivo de estilos (CSS) com o design Dark Mode
+├── script.js            # Arquivo JavaScript com a lógica do simulador
 │
-├── assets/              # Pasta para guardar as imagens que você gerou
-│   ├── hero-bg.jpg      # Imagem do trânsito com linhas neon (Aba 1)
-│   ├── simulador-bg.png # Imagem do mapa de calor/dashboard (Aba 3)
-│   └── satelite.png     # Imagem da NASA (Aba 4 - se você usar)
+├── assets/              # Diretório contendo as imagens geradas para o projeto
+│   ├── hero-bg.jpg      # Imagem de fundo da aba Início
+│   └── dashboard.png    # Imagem de fundo do Simulador
 │
-├── README.md            # O arquivo de texto com a descrição do projeto (que te mandei)
-└── integrantes.txt      # O arquivo de texto extra exigido nas regras da Global Solution
+├── README.md            # Documentação técnica do projeto
+└── integrantes.txt      # Arquivo obrigatório com RM, Nomes e Link do Vídeo Pitch
