@@ -37,16 +37,16 @@ Este projeto foi desenvolvido focado em alta performance visual sem dependência
 *   **JavaScript (Vanilla ES6):** Controle de navegação das abas e execução da lógica interativa do Simulador em tempo real.
 
 
-## Estrutura
-
-/smartflow
-│── index.html
-│── /assets
-│   └── (imagens e icones)
-│── /css
-│   │── tokens.css (As variáveis baseadas no DESIGN.md)
-│   │── reset.css  (Limpeza padrão)
-│   │── components.css (Botões, Cards, Inputs)
-│   └── layout.css (O grid de 12 colunas e as 5 Abas)
-└── /js
-    └── app.js (Lógica de navegação e simulador)
+smartflow-fiap/
+│
+├── index.html           # Arquivo principal (o código do seu site com as 5 abas)
+├── style.css            # Seu arquivo de estilos (CSS) com o design Dark Mode
+├── script.js            # Seu arquivo JavaScript com a lógica do simulador e abas
+│
+├── assets/              # Pasta para guardar as imagens que você gerou
+│   ├── hero-bg.jpg      # Imagem do trânsito com linhas neon (Aba 1)
+│   ├── simulador-bg.png # Imagem do mapa de calor/dashboard (Aba 3)
+│   └── satelite.png     # Imagem da NASA (Aba 4 - se você usar)
+│
+├── README.md            # O arquivo de texto com a descrição do projeto (que te mandei)
+└── integrantes.txt      # O arquivo de texto extra exigido nas regras da Global Solution
