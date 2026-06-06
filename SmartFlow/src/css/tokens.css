@@ -1,0 +1,37 @@
+/* css/tokens.css */
+:root {
+  /* Colors - OLED Theme */
+  --color-bg-pure: #000000;            /* OLED Black */
+  --color-bg-surface: #131313;         /* Fundo de seções secundárias */
+  --color-surface-elevated: #111111;   /* Painéis, Widgets e Cards */
+  --color-border-subtle: #27272A;      /* Zinc-800 sutil */
+  --color-border-hover: #424754;       /* Zinc-600 ativo */
+
+  /* Brand Accents */
+  --color-primary: #adc6ff;            /* Azul Técnico */
+  --color-primary-electric: #3B82F6;   /* Azul Elétrico (Botões/Links) */
+  --color-secondary-emerald: #4edea3;  /* Verde Fluxo / Ativo / Sucesso */
+  --color-tertiary-amber: #ffb786;     /* Laranja/Amber Alerta */
+  --color-status-critical: #EF4444;    /* Vermelho Alerta Máximo */
+
+  /* Text Colors */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A1A1AA;     /* Zinc-400 */
+  --color-text-muted: #52525B;         /* Zinc-600 */
+
+  /* Typography */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-display: 'Geist', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  /* Spacers */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --max-width-grid: 1440px;
+
+  /* Global Animations Speed */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

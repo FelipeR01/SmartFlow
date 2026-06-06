@@ -1,0 +1,45 @@
+@import 'tokens.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-pure);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Malha de engenharia (Grid Line de Fundo) */
+.grid-line {
+  background-image: radial-gradient(circle at 1px 1px, var(--color-border-subtle) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Animação Fade-In Padrão */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbar Personalizado */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-pure);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-subtle);
+  border-radius: var(--spacing-xs);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-hover);
+}
