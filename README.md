@@ -41,15 +41,31 @@ Este projeto foi desenvolvido focado em alta performance visual sem dependência
 Abaixo, a organização dos arquivos deste projeto:
 
 ```text
-smartflow-fiap/
-│
-├── index.html           # Arquivo principal (código HTML do site)
-├── style.css            # Arquivo de estilos (CSS) com o design Dark Mode
-├── script.js            # Arquivo JavaScript com a lógica do simulador
-│
-├── assets/              # Diretório contendo as imagens geradas para o projeto
-│   ├── hero-bg.jpg      # Imagem de fundo da aba Início
-│   └── dashboard.png    # Imagem de fundo do Simulador
-│
-├── README.md            # Documentação técnica do projeto
-└── integrantes.txt      # Arquivo obrigatório com RM, Nomes e Link do Vídeo Pitch
+smartflow/
+├── index.html                       # Página Inicial (Home / Dados de Choque)
+├── pages/
+│   ├── tecnologia.html              # Stack de Engenharia e Arquitetura IoT
+│   ├── simulador.html               # Monitoramento Tático e Controle da IA (Faria Lima x JK)
+│   ├── impacto.html                 # Impacto ESG e Alinhamento com as ODS da ONU
+│   └── contato.html                 # Pilot PoC, Pitch do YouTube e Time de Engenharia
+├── components/
+│   ├── navbar.js                    # Injeção dinâmica da Navigation Bar (Responsiva + Ativos)
+│   └── footer.js                    # Injeção dinâmica do Rodapé unificado
+├── css/
+│   ├── tokens.css                   # Design Tokens (Paleta de cores OLED, Tipografia, Espaçamentos)
+│   ├── global.css                   # Reset de estilos, malha de pontos (grid-lines) e animações globais
+│   ├── navbar.css                   # Estilização complementar do menu superior
+│   ├── footer.css                   # Estilização complementar do rodapé
+│   ├── home.css                     # Layout e efeitos específicos da Home
+│   ├── tecnologia.css               # Estilização do Bento Grid técnico
+│   ├── simulador.css                # Interface tática de câmeras e alertas críticas
+│   ├── impacto.css                  # Gráficos atmosféricos e anel estatístico ESG
+│   └── contato.css                  # Formulário do projeto piloto e cartões da equipe
+├── js/
+│   ├── home.js                      # Interatividades e paralaxe da página inicial
+│   ├── tecnologia.js                # Lógica dos nós de ingestão distribuída
+│   ├── simulador.js                 # Lógica da Engine de IA, Relógio e Bounding Boxes
+│   ├── impacto.js                   # Renderização e animação dos gráficos climáticos
+│   └── contato.js                   # Validação de dados do PoC e Toasts de notificação
+└── assets/
+    └── images/                      # Repositório de mídias, fotos e diagramas técnicos
