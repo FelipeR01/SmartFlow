@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%; 
+    max-width: 1800px;
+    margin: 0 auto; 
+    padding: 0 24px;
+}
+
+.transito-fluiu {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 40px; 
+}
+
+.alert {
+    background-color: var(--color-border-subtle);
+    color: var(--color-secondary-emerald);
+    border-radius: 20px;
+    align-items: center;
+    padding: 5px 8px;
+    max-width: 320px;
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.title {
+    font-size: 55px;
+    font-family: var(--font-family-sans);
+    font-weight: 900;
+    line-height: 1.1; 
+    margin-bottom: 25px;
+}
+
+.paragrafo {
+    max-width: 550px;
+}
+
+.button {
+    display: flex;
+    gap: 16px; 
+    margin-top: 40px;
+}
+
+.button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 700; 
+    font-family: var(--font-family-sans, sans-serif); 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.button-branco {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+}
+
+.button-branco:hover {
+    background-color: #f0f0f0; 
+}
+
+.button-preto {
+    background-color: transparent; 
+    border: 1px solid #333333;
+    color: #ffffff;
+}
+
+.button-preto:hover {
+    background-color: #1a1a1a; 
+    border-color: #555555;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;    
+    gap: 24px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.card-1, .card-2 {
+    background-color: var(--color-surface-elevated);
+    width: 100%;
+    max-width: 500px;
+    height: 160px;
+    border: solid 1px var(--color-border-subtle);
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    .transito-fluiu {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 60px;
+    }
+
+    .cards {
+        max-width: 100%;
+    }
+    
+    .card-1, .card-2 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .alert {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+
+    .button {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button button {
+        width: 100%;
+    }
+}
