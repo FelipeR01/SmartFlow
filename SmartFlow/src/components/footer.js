@@ -1,36 +1,32 @@
-/* components/footer.js */
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("footer-placeholder");
-  if (!container) return;
+document.addEventListener('DOMContentLoaded', function() {
 
-  const isInPagesFolder = window.location.pathname.includes("/pages/");
-  const basePath = isInPagesFolder ? "../" : "./";
-  const pagesPath = isInPagesFolder ? "" : "pages/";
+    var caminho = window.location.pathname;
+    var emPages = caminho.includes('/pages/');
+    var raiz = emPages ? '../' : './';
+    var pasta = 'pages/';
 
-  container.innerHTML = `
-    <footer class="w-full py-12 px-6 md:px-10 border-t border-zinc-900 bg-zinc-950/40 text-xs">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div class="space-y-3">
-          <div class="font-bold text-lg md:text-xl text-white">SmartFlow</div>
-          <p class="text-zinc-500 text-[11px] leading-relaxed max-w-md">
-            SmartFlow © 2026 - Projeto Global Solution FIAP.<br>
-            Desenvolvido por Felipe Rodrigues e Equipe. Todos os direitos reservados.
-          </p>
+    var html = `
+        <div class="footer-inner">
+
+            <div class="footer-marca">
+                <a href="${raiz}index.html" class="footer-logo">SmartFlow</a>
+                <p class="footer-copy">
+                    SmartFlow © 2026 - Projeto Global Solution FIAP.
+                    Desenvolvido por: Equipe SmartFlow 
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">API Documentation</a>
+                <a href="#" class="footer-link footer-link-destaque">Link do Vídeo Pitch do YouTube</a>
+            </div>
+
         </div>
-        
-        <div class="flex flex-col md:items-end gap-4">
-          <div class="flex flex-wrap gap-x-6 gap-y-2 font-mono text-[10px] text-zinc-400 uppercase font-semibold">
-            <a href="${basePath}index.html" class="hover:text-white transition-colors">Home</a>
-            <a href="${basePath}${pagesPath}tecnologia.html" class="hover:text-white transition-colors">Tecnologia</a>
-            <a href="${basePath}${pagesPath}simulador.html" class="hover:text-white transition-colors">Simulador</a>
-            <a href="${basePath}${pagesPath}impacto.html" class="hover:text-white transition-colors">Impacto ESG</a>
-            <a href="${basePath}${pagesPath}contato.html" class="hover:text-white transition-colors">Contato</a>
-          </div>
-          <span class="text-[10px] text-zinc-600 font-mono uppercase tracking-widest">
-            SP_GLOBAL_HUB // INTEGRATION 2026
-          </span>
-        </div>
-      </div>
-    </footer>
-  `;
+    `;
+
+    var footer = document.getElementById('footer');
+    if (footer) footer.innerHTML = html;
+
 });
