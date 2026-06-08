@@ -1,7 +1,10 @@
-var SERVICE_ID  = 'service_u4ney8j';
-var TEMPLATE_ID = 'template_k2wne6f';
+var SERVICE_ID  = 'service_9ouy3ea';
+var TEMPLATE_ID = 'template_cezgivo';
 var PUBLIC_KEY  = 'nv3s-_Yg4znxbqFdX';
 
+emailjs.init({
+    publicKey: PUBLIC_KEY,
+});
 
 document.addEventListener('DOMContentLoaded', function() {
 
