@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFlow</title>
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/simulador.css">
+</head>
+
+<body class="grid-line">
+
+    <header id="nav-bar"></header>
+
+    <main class="simulador-main">
+
+        <div class="sim-topo">
+            <div class="sim-topo-esquerda">
+                <p class="sim-cenario">CENÁRIO: CRUZAMENTO FARIA LIMA X JUSCELINO KUBITSCHEK (SP)</p>
+                <h1 class="sim-titulo">Monitoramento Tático: Av. Faria Lima x Av. JK</h1>
+            </div>
+            <div class="sim-topo-btns">
+                <button class="btn-reload" id="btn-reload">
+                    RELOAD ASSETS
+                </button>
+                <button class="btn-ia" id="btn-ia">
+                    Ativar Engine de IA
+                </button>
+            </div>
+        </div>
+
+
+        <div class="sim-grid">
+
+            <div class="sim-col-esquerda">
+
+                <div class="card-metrica">
+                    <div class="card-metrica-topo">
+                        <span class="card-metrica-label">VEÍCULOS / HORA (ENTRADA)</span>
+                    </div>
+                    <div class="card-metrica-valor">
+                        <p class="valor-grande">Gargalo<br>Crítico:<br>1.250</p>
+                        <p class="valor-unidade">Veículos/hora.</p>
+                    </div>
+                    <span class="badge-critico">ESTADO CRÍTICO (SEM IA)</span>
+                </div>
+
+                <div class="card-metrica">
+                    <div class="card-metrica-topo">
+                        <span class="card-metrica-label">CICLOS DE ESPERA</span>
+                    </div>
+                    <p class="ciclos-numero">5 <span class="ciclos-texto">ciclos de espera</span></p>
+                    <p class="ciclos-meta">
+                        Meta IA: 1 ciclo (Fluxo Contínuo)
+                    </p>
+                </div>
+
+                <div class="camera-container">
+                    <div class="camera-overlay-topo">
+                        <span class="camera-label">
+                            <span class="camera-dot"></span>
+                            CAM_FL_JK_SP_01
+                        </span>
+                        <span class="camera-codigo">DRIVE_6821</span>
+                    </div>
+
+                    <div class="camera-feed" id="camera-feed">
+                        <img src="../assets/images/faria-lima.jpg" alt="Camera Faria Lima" class="camera-img" onerror="this.style.display='none'">
+                        <div class="camera-scanline"></div>
+                    </div>
+
+                    <div class="camera-overlay-baixo">
+                        <span class="camera-coord">LAT: -23.5898</span>
+                        <div class="camera-zoom">
+                            <button class="zoom-btn">+</button>
+                            <button class="zoom-btn">−</button>
+                        </div>
+                        <span class="camera-coord">LNG: -46.6</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="sim-col-direita">
+
+                <div class="painel-protocolos">
+                    <p class="painel-titulo-sm">
+                        PROTOCOLOS DO CRUZAMENTO
+                    </p>
+
+                    <div class="protocolo-item protocolo-alerta">
+                        <div class="protocolo-header">
+                            <span class="protocolo-nome">QUALIDADE DO AR</span>
+                            <span class="protocolo-status status-vermelho">ALERTA OMS</span>
+                        </div>
+                        <p class="protocolo-desc">Alerta OMS: Alta retenção de CO₂ em marcha lenta detectada no cruzamento.</p>
+                    </div>
+
+                    <div class="protocolo-item">
+                        <div class="protocolo-header">
+                            <span class="protocolo-nome">FLUXO OTIMIZADO</span>
+                            <span class="protocolo-status status-verde">450 VEÍC/H</span>
+                        </div>
+                        <p class="protocolo-desc">Meta IA: Redução para 450 veículos/hora via sincronização adaptativa.</p>
+                    </div>
+
+                    <div class="protocolo-item">
+                        <div class="protocolo-header">
+                            <span class="protocolo-nome">ONDA VERDE JK</span>
+                            <span class="protocolo-status status-neutro">STANDBY</span>
+                        </div>
+                        <p class="protocolo-desc">Pronto para priorizar fluxo na Juscelino Kubitschek conforme demanda em tempo real.</p>
+                    </div>
+                </div>
+
+                <div class="painel-sensores">
+                    <p class="painel-titulo-sm">STATUS DOS SENSORES (F. LIMA)</p>
+
+                    <div class="sensor-item">
+                        <span class="sensor-nome">FL_NORTH_NODE</span>
+                        <span class="sensor-status">ONLINE</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-nome">FL_SOUTH_NODE</span>
+                        <span class="sensor-status">ONLINE</span>
+                    </div>
+                    <div class="sensor-item">
+                        <span class="sensor-nome">JK_WEST_NODE</span>
+                        <span class="sensor-status">ONLINE</span>
+                    </div>
+                </div>
+
+                <div class="painel-ia">
+                    <div class="painel-ia-info">
+                        <p class="painel-ia-titulo">IA PREDICTIVE ENGINE</p>
+                        <p class="painel-ia-desc" id="ia-desc">Qualidade do Ar: Níveis Normalizados. Fluxo Otimizado: 450 Veículos/hora.</p>
+                    </div>
+                    <button class="btn-ia-painel" id="btn-ia-painel">
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sim-rodape">
+            <div class="rodape-card">
+                <p class="rodape-label">SIMULATED TIME</p>
+                <p class="rodape-valor" id="relogio">11:02:51.08</p>
+            </div>
+            <div class="rodape-card">
+                <p class="rodape-label">VAZÃO PROJ. (AI)</p>
+                <p class="rodape-valor rodape-verde" id="vazao">450 v/h</p>
+            </div>
+            <div class="rodape-card">
+                <p class="rodape-label">TEMPO MÁX. ESPERA</p>
+                <p class="rodape-valor" id="espera">45s</p>
+            </div>
+            <div class="rodape-card">
+                <p class="rodape-label">AI CONFIDENCE</p>
+                <p class="rodape-valor rodape-verde" id="confianca">99.2%</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../js/simulador.js"></script>
+
+</body>
+</html>
