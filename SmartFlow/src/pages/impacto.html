@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartFlow</title>
+    <title>Impacto — SmartFlow</title>
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/impacto.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+
+<body class="grid-line">
+
+    <header id="nav-bar"></header>
+
     <main>
-        <!-- Primeiro título -->
+
         <section class="first">
-            <div class="container">
-                <p class="ods">PROJETO 100% ALINHADO À ODS 11 E ODS 13</p>  
+            <div class="first-left">
+                <p class="ods-tag">PROJETO 100% ALINHADO À ODS 11 E ODS 13</p>
                 <h1 class="first-title">Impacto Real na Mobilidade Urbana</h1>
                 <p class="first-description">São Paulo perde cerca de R$ 50 bilhões por ano com o trânsito. Otimizar a malha viária não é apenas conforto, é economia para a cidade.</p>
-<<<<<<< Updated upstream
-                <p class="ods11">● Projeto 100% alinhado à ODS 11 e ODS 13</p>
-=======
             </div>
 
             <div class="first-right">
-                <p class="ods11"> <span class="bolinha"></span> Projeto 100% alinhado à ODS 11 e ODS 13</p>
->>>>>>> Stashed changes
+                <p class="ods-alinhamento">
+                    <span class="bolinha"></span>
+                    Projeto 100% alinhado à ODS 11 e ODS 13
+                </p>
                 <h2 class="reducao">-35%</h2>
                 <p class="economia">ECONOMIA DE TEMPO DE VIAGEM</p>
             </div>
         </section>
 
-<<<<<<< Updated upstream
-        <section class="dashboard">
-            <!-- Coluna esquerda -->
-            <div class="dashboard-left">
-                <p class="emissoes">Emissões Locais</p>
-                <h2 class="number">-20%</h2>
-                <p class="dashboard-description">Eliminar a marcha lenta dos veículos retira até 300g de CO₂ a cada 10 minutos por carro da atmosfera.</p>
-                <span>JAN</span><span>MAR</span><span>MAI</span><span>JUL</span><span>SET</span><span>NOV</span>    
-=======
 
         <section class="dashboard">
-            <!-- Coluna esquerda -->
+
             <div class="dashboard-left">
                 <i data-lucide="leaf" class="leaf-icon"></i>
                 <p class="emissoes">Emissões Locais</p>
@@ -48,60 +47,62 @@
                 <p class="dashboard-description">Eliminar a marcha lenta dos veículos retira até 300g de CO₂ a cada 10 minutos por carro da atmosfera.</p>
                 <canvas id="emissChart"></canvas>
                 <div class="chart-axis">
-                    <span>JAN</span><span>MAR</span><span>MAI</span><span>JUL</span><span>SET</span><span>NOV</span>
+                    <span>JAN</span>
+                    <span>MAR</span>
+                    <span>MAI</span>
+                    <span>JUL</span>
+                    <span>SET</span>
+                    <span>NOV</span>
                 </div>
->>>>>>> Stashed changes
             </div>
-            
-            <!-- Coluna direita -->
-            <!-- Alterado para dashboard-right para manter o padrão -->
+
             <div class="dashboard-right">
+
                 <div class="first-card">
                     <p class="tempo">Economia de Tempo</p>
                     <span class="number-card">-35%</span>
                     <span class="subtitle-card">Tempo de Viagem</span>
                     <p class="card-description">Devolvemos até 40 minutos diários para o cidadão, reduzindo o estresse urbano.</p>
-<<<<<<< Updated upstream
-=======
                     <div class="progress-bar">
-                    <div class="progress-fill"></div>
+                        <div class="progress-fill"></div>
                     </div>
->>>>>>> Stashed changes
-                </div>   
-                
+                </div>
+
                 <div class="second-card">
                     <p class="impacto">Impacto Econômico</p>
                     <p class="number-second-card">R$ 50 Bilhões</p>
                     <p class="valor-description">O valor anual que São Paulo perde hoje com o caos no trânsito (FGV), passível de recuperação econômica.</p>
                 </div>
-                
+
                 <div class="third-card">
                     <p class="selo">Selo ONU (ESG)</p>
                     <p class="ods-number">ODS 11</p>
                     <p class="alinhamento-description">Alinhamento direto e mensurável com a ODS 11 (Cidades e Comunidades Sustentáveis).</p>
                 </div>
-            </div> <!-- Fechamento correto da coluna direita -->
+
+            </div>
+
         </section>
 
-<<<<<<< Updated upstream
+
         <section class="compromisso">
-            <!-- Coluna esquerda -->
+
             <div class="compromisso-left">
                 <p class="compromisso-description">Compromisso com Objetivos Globais</p>
-                
+
                 <div class="ods-card">
                     <div class="ods-11-card">
-                        <img src="" alt="ODS 11">
+                        <i data-lucide="building-2"></i>
                     </div>
                     <div class="ods-card-conteudo">
                         <h3 class="ods-card-title">ODS 11: Cidades Sustentáveis</h3>
                         <p class="ods-card-desc">Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
                     </div>
-                </div> <!-- Fechamento da div ods-card que estava faltando -->
-                    
+                </div>
+
                 <div class="ods13-card">
                     <div class="ods-13-card-image">
-                        <img src="" alt="ODS 13">
+                        <i data-lucide="thermometer"></i>
                     </div>
                     <div class="ods-card-content">
                         <h3 class="ods13-title">ODS 13: Ação Contra a Mudança Global do Clima</h3>
@@ -109,118 +110,89 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Coluna direita -->
-            <!-- Alterado para compromisso-right para manter o padrão -->
+
             <div class="compromisso-right">
                 <div class="impacto-social">
-                    <div class="impacto-social-header"> <!-- Tag que estava aberta sem fechar no lugar certo -->
-                        <div class="impacto-social-icon"> <!-- Removido o underline duplo para padronizar -->
-                            <img src="" alt="Ícone impacto social">
+                    <div class="impacto-social-header">
+                        <div class="impacto-social-icon">
+                            <i data-lucide="bar-chart-2"></i>
                         </div>
                         <h2 class="impacto-title">Impacto Social</h2>
-                    </div> <!-- Fechamento do header -->
-                    
+                    </div>
                     <p class="impacto-description">Nossa infraestrutura tecnológica é projetada para mitigar os efeitos nocivos da poluição atmosférica, protegendo a saúde de milhões de cidadãos diariamente.</p>
                     <button class="relatorio-btn">Ver Relatório Completo →</button>
                 </div>
             </div>
+
         </section>
-    </main> 
-=======
-<section class="compromisso">
-    <div class="compromisso-left">
-        <p class="compromisso-description">Compromisso com Objetivos Globais</p>
-        
-        <div class="ods-card">
-            <div class="ods-11-card">
-                <i data-lucide="building-2"></i>
-            </div>
-            <div class="ods-card-conteudo">
-                <h3 class="ods-card-title">ODS 11: Cidades Sustentáveis</h3>
-                <p class="ods-card-desc">Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
-            </div>
-        </div>
 
-        <div class="ods13-card">
-            <div class="ods-13-card-image">
-                <i data-lucide="thermometer"></i>
-            </div>
-            <div class="ods-card-content">
-                <h3 class="ods13-title">ODS 13: Ação Contra a Mudança Global do Clima</h3>
-                <p class="ods13-description">Tomar medidas urgentes para combater a mudança climática e seus impactos.</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="compromisso-right">
-    <div class="impacto-social">
-                <div class="impacto-social-header">
-                    <div class="impacto-social-icon">
-                        <i data-lucide="bar-chart-2"></i>
+        <section class="analise">
+
+            <div class="analise-left">
+                <h2 class="analise-title">Análise de Redução Térmica e Saúde</h2>
+
+                <div class="analise-cards">
+                    <div class="analise-card">
+                        <i data-lucide="thermometer"></i>
+                        <p class="analise-card-label">Ilhas de Calor</p>
+                        <p class="analise-card-desc">Redução de 1.5°C em áreas de alta densidade através da diminuição do tempo de motores em marcha lenta.</p>
                     </div>
-                    <h2 class="impacto-title">Impacto Social</h2>
+
+                    <div class="analise-card">
+                        <i data-lucide="shield-alert"></i>
+                        <p class="analise-card-label">Mitigação de Riscos</p>
+                        <p class="analise-card-desc">Foco na redução dos índices de NO2, combatendo as causas que levam a 15 mil mortes anuais na Grande SP.</p>
+                    </div>
                 </div>
-                <p class="impacto-description">Nossa infraestrutura tecnológica é projetada para mitigar os efeitos nocivos da poluição atmosférica, protegendo a saúde de milhões de cidadãos diariamente.</p>
-                <button class="relatorio-btn">Ver Relatório Completo →</button>
-            </div>
-    </div>
-</section>
-
-<section class="analise">
-    <div class="analise-left">
-        <h2 class="analise-title">Análise de Redução Térmica e Saúde</h2>
-        
-        <div class="analise-cards">
-            <div class="analise-card">
-                <i data-lucide="thermometer"></i>
-                <p class="analise-card-label">Ilhas de Calor</p>
-                <p class="analise-card-desc">Redução de 1.5°C em áreas de alta densidade através da diminuição do tempo de motores em marcha lenta.</p>
             </div>
 
-            <div class="analise-card">
-                <i data-lucide="shield-alert"></i>
-                <p class="analise-card-label">Mitigação de Riscos</p>
-                <p class="analise-card-desc">Foco na redução dos índices de NO2, combatendo as causas que levam a 15 mil mortes anuais na Grande SP.</p>
+            <div class="analise-right">
+                <div class="score-card">
+                    <div class="score-circle">
+                        <p class="score-number">80%</p>
+                        <p class="score-label">Score ESG</p>
+                    </div>
+                    <p class="score-desc">PERFORMANCE ALINHADA ODS</p>
+                </div>
             </div>
-        </div>
-    </div>
 
-<div class="analise-right">
-    <div class="score-card">
-        <div class="score-circle">
-            <p class="score-number">80%</p>
-            <p class="score-label">Score ESG</p>
-        </div>
-        <p class="score-desc">PERFORMANCE ALINHADA ODS</p>
-    </div>
-</div>
+        </section>
 
+    </main>
 
-    </main> 
+    <footer id="footer"></footer>
+
     <script>
-                new Chart(document.getElementById('emissChart'), {
-            type: 'line',
-            data: {
-                labels: ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV'],
-                datasets: [{
-                    data: [12, 18, 22, 30, 38, 50, 60, 52, 42, 55, 72],
-                    borderColor: '#10B981',
-                    backgroundColor: 'rgba(17,17,17,0.8)',
-                    fill: true,
-                    tension: 0.45,
-                    pointRadius: 0,
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } },
-                scales: { x: { display: false }, y: { display: false } }
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            new Chart(document.getElementById('emissChart'), {
+                type: 'line',
+                data: {
+                    labels: ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV'],
+                    datasets: [{
+                        data: [12, 18, 22, 30, 38, 50, 60, 52, 42, 55, 72],
+                        borderColor: '#10B981',
+                        backgroundColor: 'rgba(17,17,17,0.8)',
+                        fill: true,
+                        tension: 0.45,
+                        pointRadius: 0,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: { x: { display: false }, y: { display: false } }
+                }
+            });
+
+            lucide.createIcons();
         });
-    lucide.createIcons();
-</script>
->>>>>>> Stashed changes
+    </script>
+
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../js/impacto.js"></script>
+
 </body>
 </html>
