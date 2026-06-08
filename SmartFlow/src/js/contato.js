@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(function() {
                 feedback.style.display = 'block';
                 feedback.classList.remove('erro');
-                feedback.textContent = '// REQUEST_RECEIVED. OUR ENGINEERS WILL CONTACT YOU SHORTLY.';
+                feedback.textContent = '// SOLICITAÇÃO RECEBIDA. NOSSOS ENGENHEIROS ENTRARÃO EM CONTATO COM VOCÊ EM BREVE.';
 
                 formulario.reset();
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 feedback.style.display = 'block';
                 feedback.classList.add('erro');
-                feedback.textContent = '// ERROR: TRANSMISSION_FAILED. RETRY OR CONTACT DIRECTLY.';
+                feedback.textContent = '// ERRO: FALHA NA TRANSMISSÃO. TENTE NOVAMENTE OU ENTRE EM CONTATO DIRETAMENTE.';
 
                 setTimeout(function() {
                     botaoEnviar.disabled    = false;
