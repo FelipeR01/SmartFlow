@@ -1,55 +1,97 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
 
-    var caminho = window.location.pathname;
-    var emPages = caminho.includes('/pages/');
-    var raiz = emPages ? '../' : './';
-    var pasta = 'pages/';
+    const path = window.location.pathname;
 
-    var html = `
+    // Está dentro de src/pages?
+    const emPages = path.includes('/src/pages/');
+
+    // Base correta
+    const base = emPages ? '../../' : './';
+
+    const navHTML = `
         <nav class="nav">
-            <a href="${raiz}index.html" class="nav-logo">SmartFlow</a>
+
+            <a href="${base}index.html" class="nav-logo">
+                SmartFlow
+            </a>
 
             <ul class="nav-links">
-                <li><a href="${raiz}index.html"               data-pagina="home">Home</a></li>
-                <li><a href="${raiz}${pasta}tecnologia.html"  data-pagina="tecnologia">Technology</a></li>
-                <li><a href="${raiz}${pasta}simulador.html"   data-pagina="simulador">Simulator</a></li>
-                <li><a href="${raiz}${pasta}impacto.html"     data-pagina="impacto">Impact</a></li>
-                <li><a href="${raiz}${pasta}contato.html"     data-pagina="contato">Contact</a></li>
+
+                <li>
+                    <a href="${base}index.html" data-page="home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${base}src/pages/tecnologia.html" data-page="tecnologia">
+                        Technology
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${base}src/pages/simulador.html" data-page="simulador">
+                        Simulator
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${base}src/pages/impacto.html" data-page="impacto">
+                        Impact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="${base}src/pages/contato.html" data-page="contato">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
 
-            <a href="${raiz}${pasta}contato.html" class="nav-btn">Get Started</a>
+            <a href="${base}src/pages/contato.html" class="nav-btn">
+                Get Started
+            </a>
 
             <button class="nav-toggle" aria-label="Abrir menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
         </nav>
     `;
 
-    var navBar = document.getElementById('nav-bar');
-    if (navBar) navBar.innerHTML = html;
+    const navBar = document.getElementById('nav-bar');
 
-    var mapa = {
-        'home'      : /index\.html|\/$/ ,
-        'tecnologia': /tecnologia/,
-        'simulador' : /simulador/,
-        'impacto'   : /impacto/,
-        'contato'   : /contato/,
+    if (navBar) {
+        navBar.innerHTML = navHTML;
+    }
+
+    // Página ativa
+    const mapa = {
+        home: /index\.html$|\/$/,
+        tecnologia: /tecnologia/,
+        simulador: /simulador/,
+        impacto: /impacto/,
+        contato: /contato/,
     };
 
-    document.querySelectorAll('.nav-links a').forEach(function(link) {
-        var pagina = link.dataset.pagina;
-        if (mapa[pagina] && mapa[pagina].test(caminho)) {
-            link.classList.add('ativo');
-        }
-    });
+    document.querySelectorAll('.nav-links a')
+        .forEach(link => {
 
-    var toggle = document.querySelector('.nav-toggle');
-    if (toggle) {
-        toggle.addEventListener('click', function() {
-            navBar.classList.toggle('aberto');
+            const pagina = link.dataset.page;
+
+            if (mapa[pagina]?.test(path)) {
+                link.classList.add('ativo');
+            }
         });
-    }
+
+    // Menu mobile
+    const toggle = document.querySelector('.nav-toggle');
+
+    toggle?.addEventListener('click', () => {
+        navBar.classList.toggle('aberto');
+    });
 
 });
