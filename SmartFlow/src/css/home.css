@@ -1,0 +1,553 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-bg:           #0a0a0a;
+    --color-surface:      #111111;
+    --color-border:       #222222;
+    --color-green:        #4ade80;
+    --color-red:          #f87171;
+    --color-white:        #ffffff;
+    --color-muted:        #666666;
+    --font-sans:          'Inter', sans-serif;
+    --font-mono:          'Courier New', monospace;
+    --pad-x:              80px;
+    --pad-y:              140px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main { width: 100%; }
+
+/*HERO — TRANSITO*/
+.transito {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image:
+        linear-gradient(to right,
+            rgba(0,0,0,0.96) 0%,
+            rgba(0,0,0,0.80) 55%,
+            rgba(0,0,0,0.40) 100%),
+        url('../assets/paulista-de-cima.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.transito-fluiu {
+    width: 100%;
+    max-width: 1880px;
+    margin: 0 auto;
+    padding: 140px var(--pad-x) 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+/* ---- badge verde ---- */
+.alert {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #121212;
+    color: var(--color-green);
+    border: 1px solid #1c2e1c;
+    border-radius: 50px;
+    padding: 7px 14px;
+    margin-bottom: 24px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.alert::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-green);
+    flex-shrink: 0;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ---- títulos ---- */
+.title {
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.span-cor { color: var(--color-green); }
+
+/* ---- parágrafo hero ---- */
+.paragrafo {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ---- botões ---- */
+.button {
+    display: flex;
+    gap: 12px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.button button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 26px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    transition: all .25s ease;
+    border: none;
+}
+
+.button-branco {
+    background: var(--color-white);
+    color: #000;
+}
+.button-branco:hover { background: #e2e2e2; }
+
+.button-preto {
+    background: transparent;
+    border: 1px solid #2e2e2e !important;
+    color: var(--color-white);
+}
+.button-preto:hover {
+    background: #161616;
+    border-color: #444 !important;
+}
+
+/* ---- cards hero ---- */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 900px;
+    max-width: 480px;
+    flex-shrink: 0;
+}
+
+.card-1,
+.card-2 {
+    background: rgba(14, 14, 14, 0.92);
+    border: 1px solid var(--color-border);
+    padding: 32px 34px;
+    backdrop-filter: blur(10px);
+}
+
+.card-icon {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.especificacao-card {
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.titulo-card {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.card-1 .titulo-card { color: var(--color-white); }
+
+
+.paragrafo-card {
+    font-size: 15px;
+    color: var(--color-muted);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   URGÊNCIA
+   ============================================================ */
+.urgencia {
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+    margin-bottom: 140px;
+}
+
+.section-urgencia {
+    max-width: 1880px;
+    margin: 0 auto;
+    padding: var(--pad-y) var(--pad-x);
+}
+
+.title-urgencia { margin-bottom: 60px; }
+
+.title-urg {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+/* badge vermelho */
+.alert-urgencia {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #150808;
+    color: var(--color-red);
+    border: 1px solid #2c1111;
+    border-radius: 50px;
+    padding: 7px 14px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    font-family: var(--font-mono);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.alert-urgencia::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-red);
+    flex-shrink: 0;
+    animation: blink 1.5s infinite;
+}
+
+/* grid 2 colunas com divisor */
+.cards-urgencia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--color-border);
+}
+
+.card-1-urgencia,
+.card-2-urgencia {
+    padding: 48px 48px 0 0;
+}
+
+.card-2-urgencia {
+    padding-left: 48px;
+    padding-right: 0;
+    border-left: 1px solid var(--color-border);
+}
+
+.title-card-urgencia {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 1;
+    margin-bottom: 24px;
+    color: var(--color-white);
+}
+
+.descricao-card-urgencia {
+    font-size: 19px;
+    color: var(--color-muted);
+    line-height: 1.8;
+    max-width: 460px;
+    margin-bottom: 20px;
+}
+
+.fonte-urgencia {
+    font-size: 15px;
+    color: #333;
+    letter-spacing: .8px;
+    font-family: var(--font-mono);
+}
+
+/* ============================================================
+   PROMESSA
+   ============================================================ */
+.promessa {
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+    background: #0c0c0c;
+}
+
+.section-promessa {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--pad-y) var(--pad-x);
+    text-align: center;
+}
+
+.title-promessa {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 36px;
+    font-family: var(--font-mono);
+}
+
+.section-promessa .title {
+    font-size: 44px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.18;
+    letter-spacing: -1.5px;
+}
+
+/* ============================================================
+   COMO FUNCIONA
+   ============================================================ */
+.como-funciona {
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+    margin-bottom: 100px;
+}
+
+.section-como-funciona {
+    max-width: 1580px;
+    margin: 0 auto;
+    padding: var(--pad-y) var(--pad-x);
+}
+
+.section-como-funciona > h3 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 64px;
+    font-family: var(--font-mono);
+}
+
+.cards-como-funciona {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--color-border);
+}
+
+.card-1-como-funciona {
+    padding: 36px 32px;
+    border-right: 1px solid var(--color-border);
+    border-top: 3px solid transparent;
+    transition: border-top-color .25s;
+}
+
+.card-1-como-funciona:last-child { border-right: none; }
+
+.card-1-como-funciona:hover { border-top-color: var(--color-green); }
+
+.subtitulo {
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    color: var(--color-green);
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.title-como-funciona {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -.2px;
+    line-height: 1.25;
+}
+
+.card-1-como-funciona > p:last-child {
+    font-size: 18.5px;
+    color: var(--color-muted);
+    line-height: 1.8;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* 1440px */
+@media (max-width: 1440px) {
+    :root { --pad-x: 60px; }
+
+    .title { font-size: 72px; }
+    .title-card-urgencia { font-size: 68px; }
+    .title-urg { font-size: 42px; }
+    .section-promessa .title { font-size: 38px; }
+    .card-1-como-funciona > p:last-child { font-size: 16px; }
+    .descricao-card-urgencia { font-size: 16px; }
+}
+
+/* 1280px */
+@media (max-width: 1280px) {
+    :root { --pad-x: 48px; }
+
+    .title { font-size: 62px; }
+    .titulo-card { font-size: 32px; }
+    .title-card-urgencia { font-size: 60px; }
+    .section-promessa .title { font-size: 34px; }
+
+    .cards-como-funciona { grid-template-columns: repeat(2, 1fr); }
+    .card-1-como-funciona:nth-child(2) { border-right: none; }
+    .card-1-como-funciona:nth-child(3) {
+        border-right: 1px solid var(--color-border);
+        border-top: 1px solid var(--color-border);
+    }
+    .card-1-como-funciona:nth-child(4) {
+        border-right: none;
+        border-top: 1px solid var(--color-border);
+    }
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+    :root {
+        --pad-x: 40px;
+        --pad-y: 110px;
+    }
+
+    .title { font-size: 52px; }
+    .titulo-card { font-size: 28px; }
+    .title-card-urgencia { font-size: 52px; letter-spacing: -2px; }
+    .title-urg { font-size: 36px; }
+    .section-promessa .title { font-size: 30px; }
+    .descricao-card-urgencia { font-size: 15px; }
+    .card-1-como-funciona > p:last-child { font-size: 15px; }
+    .subtitulo { font-size: 12px; }
+    .section-como-funciona > h3 { font-size: 16px; }
+}
+
+/* 900px */
+@media (max-width: 900px) {
+    :root {
+        --pad-x: 32px;
+        --pad-y: 90px;
+    }
+
+    .transito { min-height: auto; }
+
+    .transito-fluiu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    .cards {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+    }
+    .card-1, .card-2 { flex: 1; }
+
+    .cards-urgencia { grid-template-columns: 1fr; }
+    .card-2-urgencia {
+        padding-left: 0;
+        padding-right: 0;
+        border-left: none;
+        border-top: 1px solid var(--color-border);
+        padding-top: 48px;
+    }
+    .card-1-urgencia { padding-right: 0; }
+
+    .title-card-urgencia { font-size: 64px; letter-spacing: -2.5px; }
+    .urgencia { margin-bottom: 90px; }
+    .como-funciona { margin-bottom: 60px; }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    :root {
+        --pad-x: 24px;
+        --pad-y: 80px;
+    }
+
+    .title { font-size: 40px; letter-spacing: -1.5px; }
+    .title-urg { font-size: 28px; }
+    .section-promessa .title { font-size: 26px; letter-spacing: -1px; }
+    .title-promessa { font-size: 12px; }
+
+    .paragrafo { font-size: 14px; max-width: 100%; }
+
+    .button { flex-direction: column; }
+    .button button { width: 100%; justify-content: center; }
+
+    .cards {
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+    }
+    .card-1, .card-2 { flex: unset; }
+
+    .titulo-card { font-size: 28px; }
+    .especificacao-card { font-size: 11px; }
+    .paragrafo-card { font-size: 13px; }
+
+    .cards-como-funciona { grid-template-columns: 1fr; }
+    .card-1-como-funciona {
+        border-right: none !important;
+        border-top: 1px solid var(--color-border) !important;
+    }
+    .card-1-como-funciona:first-child { border-top: none !important; }
+    .card-1-como-funciona > p:last-child { font-size: 14px; }
+    .section-como-funciona > h3 { font-size: 13px; margin-bottom: 40px; }
+
+    .title-card-urgencia { font-size: 52px; letter-spacing: -2px; }
+    .descricao-card-urgencia { font-size: 14px; max-width: 100%; }
+    .fonte-urgencia { font-size: 12px; }
+
+    .urgencia { margin-bottom: 0; }
+    .como-funciona { margin-bottom: 0; }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+    :root {
+        --pad-x: 20px;
+        --pad-y: 64px;
+    }
+
+    .title { font-size: 32px; letter-spacing: -1px; }
+    .title-card-urgencia { font-size: 44px; letter-spacing: -1.5px; }
+    .section-promessa .title { font-size: 22px; letter-spacing: -.8px; }
+    .title-urg { font-size: 24px; }
+
+    .button button { padding: 13px 18px; font-size: 12px; }
+
+    .card-1, .card-2 { padding: 24px 20px; }
+    .titulo-card { font-size: 24px; }
+
+    .card-1-como-funciona { padding: 28px 20px; }
+    .title-como-funciona { font-size: 17px; }
+    .subtitulo { font-size: 11px; }
+}

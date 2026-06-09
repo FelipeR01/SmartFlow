@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFlow</title>
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contato.css">
+</head>
+
+<body class="grid-line">
+
+    <header id="nav-bar"></header>
+
+    <main>
+
+        <section class="hero-section animate-fadeIn">
+            <div class="hero-conteudo">
+                <h1 class="hero-titulo">
+                    Inteligência Global.<br>
+                    <span class="hero-titulo-dim">Escalabilidade Piloto.</span>
+                </h1>
+                <p class="hero-descricao">
+                    SmartFlow: Solução Global 2026. Capacitando prefeituras e investidores estratégicos
+                    para implementar a próxima geração de sistemas nervosos urbanos através de
+                    Projetos Piloto ágeis (PoC).
+                </p>
+            </div>
+            <div class="hero-lado-direito">
+                <a href="#" class="btn-video" target="_blank" rel="noopener noreferrer">
+                    ASSISTIR AO PITCH
+                </a>
+            </div>
+        </section>
+
+
+        <section class="poc-section">
+
+            <div class="poc-esquerda">
+                <div class="formulario-container">
+                    <div class="formulario-header">
+                        <h2 class="formulario-titulo">Inicie um Piloto (PoC)</h2>
+                        <p class="formulario-subtitulo">
+                            INTERESSADO EM IMPLEMENTAR A MALHA SMARTFLOW NA SUA CIDADE OU FUNDO DE
+                            INVESTIMENTO? FALE COM NOSSOS ENGENHEIROS.
+                        </p>
+                    </div>
+
+                    <form id="formulario-poc" action="#">
+
+                        <div class="form-linha">
+                            <div class="form-campo">
+                                <label class="campo-label" for="nome">SEU NOME / ORGANIZAÇÃO</label>
+                                <input class="campo-input" type="text" id="nome" name="nome" placeholder="REPRESENTANTE AUTORIZADO" required>
+                            </div>
+                            <div class="form-campo">
+                                <label class="campo-label" for="email">E-MAIL CORPORATIVO</label>
+                                <input class="campo-input" type="email" id="email" name="email" placeholder="NOME@GOV.OU.ENTIDADE" required>
+                            </div>
+                        </div>
+
+                        <div class="form-linha">
+                            <div class="form-campo">
+                                <label class="campo-label" for="instituicao">INSTITUIÇÃO</label>
+                                <input class="campo-input" type="text" id="instituicao" name="instituicao" placeholder="PREFEITURA OU FUNDO DE INVESTIMENTO" required>
+                            </div>
+                            <div class="form-campo">
+                                <label class="campo-label" for="regiao">REGIÃO PROPOSTA</label>
+                                <input class="campo-input" type="text" id="regiao" name="regiao" placeholder="COORDENADAS METROPOLITANAS" required>
+                            </div>
+                        </div>
+
+                        <div class="form-campo">
+                            <label class="campo-label" for="objetivos">OBJETIVOS DO POC</label>
+                            <textarea class="campo-input campo-textarea" id="objetivos" name="objetivos" placeholder="DESCREVA A ESCALA PRETENDIDA E OS INDICADORES-CHAVE DE DESEMPENHO DO PILOTO..." required></textarea>
+                        </div>
+
+                        <div class="form-rodape">
+                            <button class="btn-solicitar" type="submit" id="btn-enviar">
+                                Solicitar Reunião
+                            </button>
+                            <p class="form-feedback" id="form-feedback"></p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <aside class="poc-direita">
+                <div class="painel-status">
+
+                    <div class="painel-topo">
+                        <span class="painel-versao">MANIFEST_V2.026</span>
+                    </div>
+
+                    <h3 class="painel-titulo">Status Operacional</h3>
+
+                    <div class="status-lista">
+                        <div class="status-item">
+                            <div class="status-info">
+                                <span class="status-dot status-dot-ativo"></span>
+                                <span class="status-nome">Malha Urbana</span>
+                            </div>
+                            <span class="status-valor status-verde">OPERACIONAL</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-info">
+                                <span class="status-dot status-dot-ativo"></span>
+                                <span class="status-nome">IA de Borda</span>
+                            </div>
+                            <span class="status-valor status-verde">ATIVO</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-info">
+                                <span class="status-dot status-dot-ativo"></span>
+                                <span class="status-nome">Ingestão de Dados</span>
+                            </div>
+                            <span class="status-valor status-verde">NORMAL</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-info">
+                                <span class="status-dot status-dot-alerta"></span>
+                                <span class="status-nome">Nó Faria Lima</span>
+                            </div>
+                            <span class="status-valor status-amber">MONITORANDO</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-info">
+                                <span class="status-dot status-dot-ativo"></span>
+                                <span class="status-nome">API Gateway</span>
+                            </div>
+                            <span class="status-valor status-verde">99.98% SLA</span>
+                        </div>
+                    </div>
+
+                    <div class="painel-divisor"></div>
+
+                    <h3 class="painel-titulo">Métricas em Tempo Real</h3>
+
+                    <div class="metricas-grid">
+                        <div class="metrica-card">
+                            <p class="metrica-valor">2.4ms</p>
+                            <p class="metrica-label">LATÊNCIA MÉDIA</p>
+                        </div>
+                        <div class="metrica-card">
+                            <p class="metrica-valor">1.2M</p>
+                            <p class="metrica-label">EVENTOS/SEG</p>
+                        </div>
+                        <div class="metrica-card">
+                            <p class="metrica-valor">847</p>
+                            <p class="metrica-label">NÓS ATIVOS</p>
+                        </div>
+                        <div class="metrica-card">
+                            <p class="metrica-valor">-34%</p>
+                            <p class="metrica-label">EMISSÃO CO₂</p>
+                        </div>
+                    </div>
+
+                    <div class="painel-divisor"></div>
+
+                    <h3 class="painel-titulo">Cidades Piloto Ativas</h3>
+
+                    <div class="cidades-lista">
+                        <div class="cidade-item">
+                            <div class="cidade-info">
+                                <span class="status-dot status-dot-ativo"></span>
+                                <span class="cidade-nome">São Paulo, BR</span>
+                            </div>
+                            <span class="cidade-fase status-verde">FASE 2</span>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../js/contato.js"></script>
+
+</body>
+</html>
