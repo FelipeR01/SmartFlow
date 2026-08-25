@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     var caminho = window.location.pathname;
-    var emPages = caminho.includes('/pages/');
-    var raiz = emPages ? '../' : './';
-    var pasta = 'pages/';
+    var emPages = caminho.includes('/src/pages/');
+    var raiz = emPages ? '../../' : './';
 
     var html = `
         <div class="footer-inner">
