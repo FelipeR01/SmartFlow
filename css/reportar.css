@@ -1,0 +1,21 @@
+/* Formulário de reportes */
+
+.reportar-grade { display: grid; gap: 2rem; }
+@media (min-width: 60rem) { .reportar-grade { grid-template-columns: 1.1fr 0.9fr; align-items: start; } }
+
+.resumo-erros { border: 3px solid var(--pare); background: var(--superficie); padding: 1rem 1.25rem; margin-bottom: 1.25rem; max-width: 68ch; }
+.resumo-erros:empty { display: none; }
+.resumo-erros h3 { color: var(--pare); font-size: 1.2rem; margin-bottom: 0.4em; }
+.resumo-erros ul { margin: 0; }
+
+.mensagem-sucesso { border: 3px solid var(--livre); background: var(--superficie); padding: 1rem 1.25rem; margin-bottom: 1.25rem; font-weight: 700; max-width: 68ch; }
+.mensagem-sucesso:empty { display: none; }
+
+.contador { text-align: right; max-width: 68ch; }
+
+.lista-reportes { list-style: none; padding: 0; margin: 0; max-width: none; }
+.reporte { background: var(--superficie); border: 1px solid var(--borda-suave); border-left: 0.35rem solid var(--faixa); padding: 1rem; margin-bottom: 0.75rem; }
+.reporte h3 { font-size: 1.15rem; margin-bottom: 0.3em; }
+.reporte p { margin: 0 0 0.4rem; }
+.reporte-meta { color: var(--texto-2); font-size: 0.92rem; }
+.vazio { background: var(--superficie); border: 1px dashed var(--borda); padding: 1.25rem; max-width: none; }
