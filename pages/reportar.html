@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reportar um ponto | SmartFlow</title>
   <meta name="description" content="Formulário para o cidadão reportar semáforos demorados e pontos de congestionamento.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Reportar um ponto | SmartFlow">
+  <meta property="og:description" content="Formulário para o cidadão reportar semáforos demorados e pontos de congestionamento.">
   <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
   <link rel="icon" type="image/x-icon" sizes="any" href="../img/favicon.ico">
   <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
@@ -16,7 +20,9 @@
   <link rel="stylesheet" href="../css/cidade.css">
   <script src="../js/comum.js" defer></script>
   <script src="../js/movimento.js" defer></script>
+  <script src="../js/dados.js" defer></script>
   <script src="../js/reportar.js" defer></script>
+  <script src="../js/mapa.js" defer></script>
 </head>
 <body>
   <div class="progresso" aria-hidden="true"></div>
@@ -135,6 +141,12 @@
         </div>
 
         <div>
+          <h2 id="t-mapa">Mapa dos seus reportes</h2>
+          <p>Mapa esquemático, fora de escala. Cada reporte vira um pino na sua região. Clique numa região para escolhê-la no formulário.</p>
+          <div class="mapa-caixa">
+            <svg id="mapa-svg" viewBox="0 0 400 360" role="group" aria-labelledby="t-mapa"></svg>
+          </div>
+          <p class="mapa-resumo" id="mapa-resumo" aria-live="polite"></p>
           <h2 id="t-lista">Seus reportes</h2>
           <ul class="lista-reportes" id="lista-reportes" aria-labelledby="t-lista"></ul>
           <p><button type="button" class="botao botao-escuro" id="btn-limpar" hidden>Remover todos os reportes</button></p>

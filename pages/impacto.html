@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Impacto | SmartFlow</title>
   <meta name="description" content="Horas devolvidas por ano, ODS 11 e 13, indicadores e plano de expansão do SmartFlow.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Impacto | SmartFlow">
+  <meta property="og:description" content="Horas devolvidas por ano, ODS 11 e 13, indicadores e plano de expansão do SmartFlow.">
   <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
   <link rel="icon" type="image/x-icon" sizes="any" href="../img/favicon.ico">
   <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
@@ -20,6 +24,7 @@
   <script src="../js/movimento.js" defer></script>
   <script src="../js/dados.js" defer></script>
   <script src="../js/impacto.js" defer></script>
+  <script src="../js/calor.js" defer></script>
 </head>
 <body>
   <div class="progresso" aria-hidden="true"></div>
@@ -79,6 +84,24 @@
 
         <ul class="grafico" id="grafico-corredores"></ul>
         <p class="resumo" id="impacto-total" role="status"></p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="t-calor">
+      <div class="container">
+        <h2 id="t-calor" class="secao-titulo">Mapa de calor dos corredores</h2>
+        <div class="calor-controles">
+          <div class="calor-grupo-botoes" role="group" aria-label="Escolha o cenário">
+            <button type="button" class="calor-botao" data-calor="hoje" aria-pressed="true">Hoje</button>
+            <button type="button" class="calor-botao" data-calor="depois" aria-pressed="false">Com o SmartFlow</button>
+          </div>
+          <p class="calor-resumo" id="calor-resumo" aria-live="polite"></p>
+        </div>
+        <div id="calor-mapa"></div>
+        <p class="calor-legenda"><span>Atraso por viagem:</span>
+          <span><i class="calor-n0"></i> menos de 8 min</span><span><i class="calor-n1"></i> 8 a 10</span><span><i class="calor-n2"></i> 10 a 12</span>
+          <span><i class="calor-n3"></i> 12 a 14</span><span><i class="calor-n4"></i> 14 a 16</span><span><i class="calor-n5"></i> 16 min ou mais</span></p>
+        <p class="aviso-dados"><strong>Dados ilustrativos.</strong> A cor mostra o atraso de demonstração do protótipo, não uma medição da CET. Cada quadrado traz o número escrito, então a cor nunca é a única informação.</p>
       </div>
     </section>
 

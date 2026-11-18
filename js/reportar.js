@@ -42,6 +42,7 @@
   function salvarReportes(lista) {
     try {
       window.localStorage.setItem(CHAVE, JSON.stringify(lista));
+      document.dispatchEvent(new CustomEvent("reportes:mudou"));
       return true;
     } catch (erro) {
       return false;

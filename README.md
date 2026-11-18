@@ -37,7 +37,7 @@ SmartFlow/
 ├── css/     fontes, base, cidade (tema), home, paginas, simulador, reportar, impacto
 ├── img/     logo, favicon (SVG, ICO, PNG) e fotos
 ├── fonts/   Inter e Sora (licença SIL OFL), embutidas para funcionar offline
-├── js/      comum, movimento, dados, home, simulador, reportar, impacto
+├── js/      comum, tema, movimento, dados, home, radar, simulador, comparar, simulacao, camera, impacto, calor, reportar, mapa
 └── img/     logo, diagrama-solucao.svg e fotos/ (fotos, vídeo e quadros)
 ```
 
@@ -92,3 +92,12 @@ As fotos `foto-*.webp` são recortes das fotos acima, usados em outras páginas.
 ## Fontes tipográficas
 
 Sora (títulos) e Inter (texto), todas com licença SIL Open Font License. Os arquivos e as licenças estão em `fonts/`.
+
+
+## Funcionalidades interativas
+
+- **Início:** calculadora de minutos perdidos (barra que muda de cor) e radar dos 13 corredores (`js/home.js`, `js/radar.js`).
+- **Solução:** simulação de um cruzamento com dois semáforos recebendo os mesmos carros (`js/simulacao.js`). Modelo simplificado, com ônibus e pedidos de pedestre. As taxas de chegada são hipóteses do grupo, não medições.
+- **Simulador:** tabela com filtro e ordenação, "Meu trajeto" e comparação de dois trajetos com botão de copiar (`js/simulador.js`, `js/comparar.js`).
+- **Impacto:** barras de horas por corredor e mapa de calor (`js/impacto.js`, `js/calor.js`).
+- **Reportar:** formulário com validação própria e mapa esquemático dos reportes salvos no navegador (`js/reportar.js`, `js/mapa.js`).

@@ -632,3 +632,44 @@ html[data-contraste="alto"] .sim-painel, html[data-contraste="alto"] .radar-info
 }
 .camera-link { margin: 1.25rem 0 0; color: var(--texto-2); }
 .secao-clara .grupo-botoes { margin-bottom: 1.5rem; }
+
+/* Mapa esquemático dos reportes */
+.mapa-caixa { max-width: 34rem; margin: 1rem 0; }
+#mapa-svg { display: block; width: 100%; height: auto; }
+.mapa-bloco { fill: var(--superficie); stroke: var(--linha-forte); stroke-width: 1.5; transition: stroke 0.2s ease; }
+.mapa-regiao { cursor: pointer; }
+.mapa-regiao:hover .mapa-bloco, .mapa-regiao:focus-visible .mapa-bloco { stroke: var(--faixa); }
+.mapa-regiao:focus-visible { outline: none; }
+.mapa-regiao:focus-visible .mapa-bloco { stroke-width: 3; }
+.mapa-nome { fill: var(--texto-2); font-family: var(--fonte-titulo); font-size: 13px; font-weight: 600; }
+.mapa-corredor { fill: var(--borda); }
+.mapa-pino circle { fill: var(--pare); stroke: var(--fundo); stroke-width: 2; }
+.mapa-resumo { margin: 0.5rem 0 0; color: var(--texto-2); font-size: 0.95rem; }
+
+/* Mapa de calor dos corredores (Impacto) */
+.calor-controles { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin: 1.25rem 0; }
+.calor-grupo-botoes { display: inline-flex; border: 1px solid var(--borda); border-radius: 999px; padding: 0.15rem; }
+.calor-botao { min-height: 2.5rem; padding: 0 1.1rem; border: 0; border-radius: 999px; background: transparent; color: var(--texto); font: inherit; font-weight: 600; cursor: pointer; }
+.calor-botao[aria-pressed="true"] { background: var(--faixa); color: var(--sobre-faixa); }
+.calor-resumo { margin: 0; color: var(--texto-2); max-width: 40rem; }
+#calor-mapa { display: grid; gap: 1.25rem; }
+@media (min-width: 56rem) { #calor-mapa { grid-template-columns: repeat(3, 1fr); } }
+.calor-grupo h3 { margin: 0 0 0.6rem; font-size: 1rem; color: var(--texto-2); }
+.calor-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; max-width: none; }
+.calor-celula { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; padding: 0.7rem 0.9rem; border-radius: var(--raio); color: #0B1220; transition: background-color 0.35s ease; }
+.calor-celula strong { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.calor-n0 { background: #34E3B9; } .calor-n1 { background: #9BE36B; } .calor-n2 { background: #F5D547; }
+.calor-n3 { background: #F5A142; } .calor-n4 { background: #FF8456; } .calor-n5 { background: #FF6B6B; }
+.calor-legenda { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.75rem; margin: 1.25rem 0 0; color: var(--texto-2); font-size: 0.9rem; }
+.calor-legenda i { display: inline-block; width: 1.1rem; height: 0.7rem; border-radius: 0.2rem; }
+
+/* Impressão: só o conteúdo, em preto sobre branco */
+@media print {
+  .topo, .progresso, .pular, .preferencias, .fundo-video, .btn-video, .sim-controles, .grupo-botoes, #radar-chave, .chave { display: none !important; }
+  html, body, .secao, .secao-clara { background: #fff !important; color: #000 !important; }
+  .secao::before, .secao-radar::before, .secao-sim::before { display: none !important; }
+  .cabecalho-pagina, .hero { background: #fff !important; color: #000 !important; }
+  a { color: #000; text-decoration: underline; }
+  .secao { break-inside: avoid-page; padding-block: 1rem; }
+}
+.mapa-resumo { margin-bottom: 1.75rem; }
