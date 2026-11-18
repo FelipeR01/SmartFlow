@@ -18,6 +18,7 @@
   <script src="../js/movimento.js" defer></script>
   <script src="../js/dados.js" defer></script>
   <script src="../js/simulador.js" defer></script>
+  <script src="../js/comparar.js" defer></script>
 </head>
 <body>
   <div class="progresso" aria-hidden="true"></div>
@@ -135,6 +136,29 @@
             <div class="resultado-trajeto" id="resultado-trajeto" role="status" aria-live="polite"></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="secao secao-clara" aria-labelledby="t-comparar">
+      <div class="container">
+        <h2 id="t-comparar" class="secao-titulo">Compare dois trajetos</h2>
+        <p class="comp-intro">Escolha duas avenidas e veja quantas horas por ano cada uma custa hoje e com o SmartFlow. As viagens por dia e os dias por semana são os do campo "Meu trajeto", acima.</p>
+        <div class="comp-campos">
+          <div class="campo">
+            <label for="comp-a">Trajeto A</label>
+            <select id="comp-a"></select>
+          </div>
+          <div class="campo">
+            <label for="comp-b">Trajeto B</label>
+            <select id="comp-b"></select>
+          </div>
+        </div>
+        <div class="comp-resultado" id="comp-resultado" role="status" aria-live="polite"></div>
+        <div class="grupo-botoes">
+          <button type="button" class="botao botao-escuro" id="btn-copiar">Copiar resultado</button>
+          <span class="comp-aviso" id="copiar-aviso" role="status"></span>
+        </div>
+        <p class="aviso-dados"><strong>Dados ilustrativos.</strong> A comparação usa os atrasos e ganhos de demonstração do protótipo.</p>
       </div>
     </section>
     <section class="faixa-foto" aria-label="Foto de uma avenida de São Paulo">

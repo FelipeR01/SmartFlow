@@ -541,8 +541,8 @@ html[data-tema="claro"]:not([data-contraste="alto"]) .camera { color-scheme: dar
    Simulação de cruzamento (Solução) e radar dos corredores (Início)
    ========================================================================== */
 .secao-sim .container > p, .secao-radar .radar-intro { max-width: 46rem; color: var(--texto-2); }
-.sim-grade { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
-@media (min-width: 48rem) { .sim-grade { grid-template-columns: 1fr 1fr; } }
+.cruz-grade { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+@media (min-width: 48rem) { .cruz-grade { grid-template-columns: 1fr 1fr; } }
 .sim-painel { margin: 0; min-width: 0; background: var(--superficie); border: 1px solid var(--borda-suave); border-radius: var(--raio); padding: 1rem; display: flex; flex-direction: column; gap: 0.9rem; }
 .sim-painel-destaque { border-color: color-mix(in srgb, var(--faixa) 55%, var(--borda-suave)); box-shadow: 0 0 2.5rem -1.2rem var(--faixa); }
 .sim-painel h3 { margin: 0; }
@@ -610,3 +610,25 @@ html[data-contraste="alto"] .sim-painel, html[data-contraste="alto"] .radar-info
   .radar-ponto { transition: r 0.2s ease; }
 }
 .radar-lateral .chave { align-self: flex-start; }
+
+/* Comparação de trajetos (Simulador) */
+.comp-intro { max-width: 46rem; color: var(--texto-2); }
+.comp-campos { display: grid; gap: 1rem; margin: 1.25rem 0; }
+@media (min-width: 40rem) { .comp-campos { grid-template-columns: 1fr 1fr; } }
+.comp-campos .campo { margin: 0; }
+.comp-resultado { margin: 0 0 1.25rem; }
+.tabela-comparar { width: 100%; border-collapse: collapse; background: var(--superficie); border: 1px solid var(--borda-suave); }
+.tabela-comparar caption { text-align: left; color: var(--texto-2); font-size: 0.92rem; padding: 0 0 0.6rem; caption-side: top; }
+.tabela-comparar th, .tabela-comparar td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--borda-suave); font-variant-numeric: tabular-nums; }
+.tabela-comparar thead th { color: var(--texto-2); font-weight: 600; font-size: 0.9rem; }
+.tabela-comparar td:last-child { color: var(--faixa); font-weight: 700; }
+.comp-frase { margin: 1rem 0 0; font-size: 1.05rem; max-width: 52rem; }
+.comp-aviso { margin-left: 0.75rem; color: var(--texto-2); align-self: center; }
+@media (max-width: 40rem) {
+  .tabela-comparar thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .tabela-comparar tr { display: block; padding: 0.6rem 0; border-bottom: 1px solid var(--borda-suave); }
+  .tabela-comparar th, .tabela-comparar td { display: block; border: 0; padding: 0.25rem 1rem; }
+  .tabela-comparar td::before { content: attr(data-rotulo) ": "; color: var(--texto-2); font-weight: 400; }
+}
+.camera-link { margin: 1.25rem 0 0; color: var(--texto-2); }
+.secao-clara .grupo-botoes { margin-bottom: 1.5rem; }
