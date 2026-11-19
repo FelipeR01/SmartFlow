@@ -1,0 +1,56 @@
+/* Simulador: tabela de corredores e cálculo do trajeto */
+
+.sim-grade { display: grid; gap: 2rem; }
+@media (min-width: 64rem) { .sim-grade { grid-template-columns: 1fr 22rem; align-items: start; } }
+
+.painel { background: var(--superficie); border: 1px solid var(--borda-suave); padding: 1.25rem; }
+.painel h2 { font-size: 1.6rem; }
+
+.controles { display: grid; gap: 1rem; margin-bottom: 1.25rem; }
+@media (min-width: 40rem) { .controles { grid-template-columns: 1fr 1fr; } }
+.controles .campo { margin-bottom: 0; }
+
+/* Chave liga/desliga do SmartFlow */
+.chave {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  min-height: 2.75rem; padding: 0.35rem 0.9rem 0.35rem 0.5rem;
+  background: var(--superficie); color: var(--texto);
+  border: 2px solid var(--borda); border-radius: 2rem;
+  font: 700 1rem var(--fonte-texto); cursor: pointer;
+}
+.chave-trilho { position: relative; width: 3rem; height: 1.6rem; background: var(--borda-suave); border: 2px solid var(--borda); border-radius: 1rem; transition: background 0.2s; }
+.chave-bola { position: absolute; top: 50%; left: 0.15rem; width: 1.1rem; height: 1.1rem; background: var(--escuro); border-radius: 50%; transform: translateY(-50%); transition: left 0.2s; }
+html[data-contraste="alto"] .chave-bola { background: #FFFFFF; }
+.chave[aria-checked="true"] { border-color: var(--livre); }
+.chave[aria-checked="true"] .chave-trilho { background: var(--livre); border-color: var(--livre); }
+.chave[aria-checked="true"] .chave-bola { left: 1.45rem; background: #FFFFFF; }
+html[data-contraste="alto"] .chave[aria-checked="true"] .chave-bola { background: #000000; }
+
+.resumo { background: var(--fundo); border: 1px solid var(--borda-suave); padding: 0.75rem 1rem; margin-bottom: 1rem; max-width: none; }
+.resumo strong { font-size: 1.1rem; }
+
+/* Tabela */
+.tabela-corredores { width: 100%; border-collapse: collapse; }
+.tabela-corredores caption { text-align: left; padding-bottom: 0.5rem; color: var(--texto-2); font-size: 0.95rem; }
+.tabela-corredores th, .tabela-corredores td { text-align: left; padding: 0.65rem 0.7rem; border-bottom: 1px solid var(--borda-suave); vertical-align: middle; }
+.tabela-corredores thead th { background: var(--escuro); color: var(--sobre-escuro); font-size: 0.95rem; }
+.tabela-corredores tbody th { font-weight: 700; }
+.tabela-corredores .num { white-space: nowrap; }
+.celula-medida { display: flex; align-items: center; gap: 0.6rem; min-width: 9rem; }
+.celula-medida span { min-width: 4rem; font-weight: 700; white-space: nowrap; }
+.ganho { color: var(--livre); font-weight: 700; }
+
+/* Meu trajeto */
+.resultado-trajeto { margin-top: 1rem; padding: 1rem; background: var(--fundo); border: 1px solid var(--linha-forte); border-top: 2px solid var(--faixa); }
+.resultado-trajeto p { margin: 0 0 0.5rem; }
+.resultado-trajeto p:last-child { margin-bottom: 0; }
+.resultado-destaque { font-weight: 700; font-size: 1.15rem; }
+
+/* Tabela vira lista de cartões no celular */
+@media (max-width: 47.99rem) {
+  .tabela-corredores thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tabela-corredores, .tabela-corredores tbody, .tabela-corredores tr, .tabela-corredores th, .tabela-corredores td { display: block; width: 100%; }
+  .tabela-corredores tr { border: 1px solid var(--borda-suave); margin-bottom: 0.75rem; padding: 0.4rem 0; background: var(--superficie); }
+  .tabela-corredores th, .tabela-corredores td { border-bottom: 0; padding: 0.3rem 0.8rem; }
+  .tabela-corredores td[data-rotulo]::before { content: attr(data-rotulo) ": "; font-weight: 700; display: block; font-size: 0.9rem; color: var(--texto-2); }
+}

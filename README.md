@@ -1,71 +1,118 @@
-# 🚦 SmartFlow - Sistema de Gestão Viária Inteligente
+# SmartFlow
 
-![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
-![Global Solution](https://img.shields.io/badge/FIAP-Global_Solution_2026-black?style=for-the-badge)
-![Linguagens](https://img.shields.io/badge/Tecnologias-HTML5_|_CSS3_|_JavaScript-blue?style=for-the-badge)
+Protótipo web da **Global Solution 2026/2 (FIAP)**, tema **CitizenTech**.
+Curso: Engenharia de Software.
 
-## 📖 Descrição do Projeto
+## O que é
 
-O **SmartFlow** é um "Command Dashboard" (Painel de Controle) B2B focado em Cidades Inteligentes (*Smart Cities*). Ele foi concebido para resolver o gargalo crônico de mobilidade urbana na cidade de São Paulo, que atualmente suporta uma frota de quase 10 milhões de veículos. 
+O SmartFlow é uma proposta para quem se desloca todos os dias em São Paulo, principalmente quem depende de ônibus. A ideia é que o cidadão reporte onde o trânsito trava e que os semáforos passem a se ajustar à fila real, em vez de seguir sempre o mesmo tempo.
 
-O projeto simula um sistema que abandona os tempos fixos de semáforos. Utilizando Visão Computacional (processada na borda - *Edge Computing*) integrada a câmeras de trânsito já existentes, a Inteligência Artificial calcula a densidade das vias em tempo real e orquestra a abertura dos semáforos, priorizando a fluidez. 
+- **Cidadão beneficiado:** quem se desloca diariamente em São Paulo para trabalhar ou estudar.
+- **Problema:** o paulistano gasta em média 2h25 por dia em deslocamentos; quem usa transporte coletivo gasta 2h47, dez minutos a mais que em 2023 (Rede Nossa São Paulo, *Viver em SP 2024: Mobilidade Urbana*, Ipec).
+- **ODS:** 11 (cidades e comunidades sustentáveis) e 13 (ação contra a mudança global do clima).
 
-Para validar o impacto ambiental (redução de emissões de marcha lenta), o sistema cruza os ganhos de fluxo com APIs de monitoramento climático da NASA.
+## Como abrir
 
-## 🎯 Objetivo e Impacto (ESG)
+Não precisa instalar nada. Abra o arquivo `index.html` em qualquer navegador (dois cliques).
 
-*   **Redução de Tempo de Viagem:** Estimativa de devolução de até 40 minutos diários para o cidadão.
-*   **Mitigação Climática:** Previsão de queda de 20% nas emissões locais de CO₂/NO₂ em corredores de tráfego denso.
-*   **Alinhamento ONU:** Contribuição direta com a **ODS 11** (Cidades Sustentáveis) e **ODS 13** (Ação Climática).
+Site publicado: **https://smart-flow-nine-alpha.vercel.app**  
+Código: **https://github.com/FelipeR01/SmartFlow**
 
-## 🗂️ Estrutura do Site (Abas e Funcionalidades)
+## Páginas
 
-A Prova de Conceito (PoC) entregue é uma *Single Page Application* composta por 5 seções principais:
+| Página | Arquivo | O que tem |
+|---|---|---|
+| Início | `index.html` | Problema com dado real e fonte, calculadora com semáforo, proposta e ODS |
+| Solução | `pages/solucao.html` | Como funciona, o que o protótipo faz e o que a solução completa faria, ecossistema |
+| Simulador | `pages/simulador.html` | Tabela de 13 corredores, filtro, ordenação, chave do SmartFlow e cálculo "Meu trajeto" |
+| Impacto | `pages/impacto.html` | Gráfico de horas por ano, ODS, indicadores e plano de expansão |
+| Reportar | `pages/reportar.html` | Formulário com validação em JavaScript e lista de reportes salvos no navegador |
 
-1.  **Início (`#home`):** Apresentação do problema viário em São Paulo (2026) e a proposta de valor do SmartFlow.
-2.  **Tecnologia (`#tech`):** Arquitetura distribuída detalhada (Integração IoT, Edge Computing, Validação Espacial).
-3.  **Simulador (`#simulator`):** Dashboard interativo que simula a IA atuando no cruzamento Faria Lima x JK. (Utiliza JavaScript para interatividade dinâmica).
-4.  **Impacto (`#impact`):** Relatório Data-Driven comprovando viabilidade financeira e ambiental (Dados FGV e IEMA).
-5.  **Contato (`#contact`):** Formulário de captação para prefeituras e investidores.
-
-## 🛠️ Tecnologias Utilizadas
-
-Este projeto foi desenvolvido focado em alta performance visual sem dependência de frameworks pesados (Zero-weight depth):
-
-*   **HTML5 Semântico:** Estruturação lógica e acessível.
-*   **CSS3 (Custom Properties / Grid):** Design System baseado em variáveis, interface "Dark Mode" estilo SaaS corporativo e Glassmorphism.
-*   **JavaScript (Vanilla ES6):** Controle de navegação das abas e execução da lógica interativa do Simulador em tempo real.
-
-## 📂 Estrutura do Repositório
-
-Abaixo, a organização dos arquivos deste projeto:
+## Estrutura de pastas
 
 ```text
-smartflow/
-├── index.html                       # Página Inicial (Home / Dados de Choque)
-├── pages/
-│   ├── tecnologia.html              # Stack de Engenharia e Arquitetura IoT
-│   ├── simulador.html               # Monitoramento Tático e Controle da IA (Faria Lima x JK)
-│   ├── impacto.html                 # Impacto ESG e Alinhamento com as ODS da ONU
-│   └── contato.html                 # Pilot PoC, Pitch do YouTube e Time de Engenharia
-├── components/
-│   ├── navbar.js                    # Injeção dinâmica da Navigation Bar (Responsiva + Ativos)
-│   └── footer.js                    # Injeção dinâmica do Rodapé unificado
-├── css/
-│   ├── tokens.css                   # Design Tokens (Paleta de cores OLED, Tipografia, Espaçamentos)
-│   ├── global.css                   # Reset de estilos, malha de pontos (grid-lines) e animações globais
-│   ├── navbar.css                   # Estilização complementar do menu superior
-│   ├── footer.css                   # Estilização complementar do rodapé
-│   ├── home.css                     # Layout e efeitos específicos da Home
-│   ├── tecnologia.css               # Estilização do Bento Grid técnico
-│   ├── simulador.css                # Interface tática de câmeras e alertas críticas
-│   ├── impacto.css                  # Gráficos atmosféricos e anel estatístico ESG
-│   └── contato.css                  # Formulário do projeto piloto e cartões da equipe
-├── js/
-│   ├── home.js                      # Interatividades e paralaxe da página inicial
-│   ├── tecnologia.js                # Lógica dos nós de ingestão distribuída
-│   ├── simulador.js                 # Lógica da Engine de IA, Relógio e Bounding Boxes
-│   ├── impacto.js                   # Renderização e animação dos gráficos climáticos
-│   └── contato.js                   # Validação de dados do PoC e Toasts de notificação
-└── assets/
-    └── images/                      # Repositório de mídias, fotos e diagramas técnicos
+SmartFlow/
+├── index.html
+├── README.md
+├── pages/   solucao, simulador, impacto, reportar
+├── css/     fontes, base, cidade (tema), home, paginas, simulador, reportar, impacto
+├── img/     logo, favicon (SVG, ICO, PNG) e fotos
+├── fonts/   Inter e Sora (licença SIL OFL), embutidas para funcionar offline
+├── js/      comum, tema, movimento, dados, home, radar, simulador, comparar, simulacao, camera, impacto, calor, reportar, mapa
+└── img/     logo, diagrama-solucao.svg e fotos/ (fotos, vídeo e quadros)
+```
+
+## Tecnologias
+
+HTML5 semântico, CSS3 (variáveis, flexbox, grid e media queries) e JavaScript puro (arrays de objetos, DOM, eventos, validação de formulário e `localStorage`). Nenhum framework ou biblioteca externa. Nenhum recurso é carregado da internet, então o site funciona offline.
+
+## Acessibilidade
+
+Tags semânticas e landmarks, link "Pular para o conteúdo", `label` em todos os campos, mensagens de erro ligadas aos campos, navegação completa pelo teclado com foco visível, contraste conferido, alvos de toque de pelo menos 44 px, respeito a `prefers-reduced-motion`, **modo de alto contraste** e **ajuste do tamanho do texto** em todas as páginas.
+
+## Dados ilustrativos
+
+Os corredores, atrasos e percentuais de redução do Simulador e do Impacto (`js/dados.js`) são **valores ilustrativos** criados para demonstrar a simulação. Não são medições oficiais. O único dado real do site é o tempo de deslocamento citado acima, com fonte.
+
+## Integrantes
+
+| Nome | RM |
+|---|---|
+| Nicholas de Freitas Araujo | PREENCHER |
+| Luiz Felipe Carvalho Matos | PREENCHER |
+| Paulo José | PREENCHER (sobrenome completo) |
+| Guilherme Matias dos Santos | PREENCHER |
+| Felipe Rodrigues da Silva | PREENCHER |
+
+## Vídeo pitch
+
+**COLE AQUI O LINK PÚBLICO DO VÍDEO (YouTube, Google Drive ou Vimeo)**
+
+## Uso de IA generativa
+
+- **Ferramenta:** Claude (Anthropic).
+- **Para quê:** leitura e organização dos requisitos, planejamento, rascunho do código e dos textos, e testes automatizados de acessibilidade e de funcionamento.
+- **Como foi usada:** o resultado foi revisado e testado pelo grupo antes da entrega.
+
+## Origem do projeto e créditos
+
+Este protótipo é uma evolução do projeto SmartFlow do próprio grupo, publicado em agosto de 2026 em `github.com/FelipeR01/SmartFlow`. O código desta versão foi reescrito para o tema CitizenTech. Fontes de dados e links estão na página **Impacto**, seção "Fontes e créditos" (também ligada no rodapé de todas as páginas).
+
+## Imagens e vídeo
+
+Cada foto e vídeo aparece uma única vez no site. As imagens de terceiros têm licença livre (Unsplash, Pexels ou Creative Commons) e foram recortadas e comprimidas para a web.
+
+| Arquivo | Onde aparece | Autor e licença |
+|---|---|---|
+| `img/fotos/video-marginal.mp4` (+ `.jpg`) | vídeo da capa (Início) | João Pavese, Pexels (licença Pexels) |
+| `img/fotos/video-paulista.mp4` (+ `.jpg`) | demonstração de câmera (Solução) | Luiz Valerio Trindade, Pexels (licença Pexels) |
+| `img/fotos/video-skyline.mp4` (+ `.jpg`) | fundo das páginas internas | Zinho Santos, Pexels (licença Pexels) |
+| `img/fotos/sp-marginal-lentidao.webp` | foto do problema (Início) | Mariordo, Wikimedia Commons (CC BY-SA 3.0) |
+| `img/fotos/sp-pedestres-faixa.webp` | galeria (Início) | Tutz Dias, Unsplash (licença Unsplash) |
+| `img/fotos/sp-avenida-arvores.webp` | faixa de foto (Simulador) | Bruno Thethe, Unsplash (licença Unsplash) |
+| `img/fotos/sp-onibus-paulista.webp` | "Quem sente a diferença" (Impacto) | Selena Jiménez, Unsplash (licença Unsplash) |
+| `img/fotos/sp-prestes-maia.webp` | foto ao lado dos reportes (Reportar) | maria roberta castilho, Unsplash (licença Unsplash) |
+| `img/fotos/cab-solucao.webp` | topo da Solução | Felipe Brayner, Unsplash (licença Unsplash) |
+| `img/fotos/cab-simulador.webp` | topo do Simulador | Vitor Mendes Stafusa, Unsplash (licença Unsplash) |
+| `img/fotos/cab-impacto.webp` | topo do Impacto | Maick Maciel, Unsplash (licença Unsplash) |
+| `img/fotos/cab-reportar.webp` | topo do Reportar | Daniel Granja, Unsplash (licença Unsplash) |
+| `img/fotos/sp-estaiada-noite.webp`, `sp-viaduto-lentidao.webp`, `sp-paulista-entardecer.webp` | galeria (Início) e Impacto | enviadas pelo grupo. PREENCHER (origem; se foram geradas com IA, escreva isso aqui) |
+| `img/fotos/camera-faria-lima.webp` | imagem de câmera (Solução) | do protótipo anterior do grupo. PREENCHER (fonte da imagem) |
+
+Movimento: entrada dos blocos ao rolar, barras que crescem, faixa de tráfego animada e diagrama animado na Solução, tudo em CSS e JavaScript puros (`js/movimento.js`). Quem ativa "reduzir movimento" no sistema vê a página sem animações.
+
+O vídeo da página inicial tem botão "Pausar vídeo" e fica parado para quem pede movimento reduzido no sistema.
+
+
+## Fontes tipográficas
+
+Sora (títulos) e Inter (texto), todas com licença SIL Open Font License. Os arquivos e as licenças estão em `fonts/`.
+
+
+## Funcionalidades interativas
+
+- **Início:** calculadora de minutos perdidos (barra que muda de cor) e radar dos 13 corredores (`js/home.js`, `js/radar.js`).
+- **Solução:** simulação de um cruzamento com dois semáforos recebendo os mesmos carros (`js/simulacao.js`). Modelo simplificado, com ônibus e pedidos de pedestre. As taxas de chegada são hipóteses do grupo, não medições.
+- **Simulador:** tabela com filtro e ordenação, "Meu trajeto" e comparação de dois trajetos com botão de copiar (`js/simulador.js`, `js/comparar.js`).
+- **Impacto:** barras de horas por corredor e mapa de calor (`js/impacto.js`, `js/calor.js`).
+- **Reportar:** formulário com validação própria e mapa esquemático dos reportes salvos no navegador (`js/reportar.js`, `js/mapa.js`).

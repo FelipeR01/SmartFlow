@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador | SmartFlow</title>
+  <meta name="description" content="Compare o atraso em corredores de São Paulo com e sem o SmartFlow e calcule as horas que você recupera por ano.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Simulador | SmartFlow">
+  <meta property="og:description" content="Compare o atraso em corredores de São Paulo com e sem o SmartFlow e calcule as horas que você recupera por ano.">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <link rel="icon" type="image/x-icon" sizes="any" href="../img/favicon.ico">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <meta name="theme-color" content="#05070B">
+  <script src="../js/tema.js"></script>
+  <link rel="stylesheet" href="../css/fontes.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/simulador.css">
+  <link rel="stylesheet" href="../css/cidade.css">
+  <script src="../js/comum.js" defer></script>
+  <script src="../js/movimento.js" defer></script>
+  <script src="../js/dados.js" defer></script>
+  <script src="../js/simulador.js" defer></script>
+  <script src="../js/comparar.js" defer></script>
+</head>
+<body>
+  <div class="progresso" aria-hidden="true"></div>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo-interno">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo-smartflow.svg" alt="" width="32" height="32">
+        <span>SmartFlow</span>
+      </a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      <nav aria-label="Principal">
+        <ul class="menu-lista" id="menu-principal">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="solucao.html">Solução</a></li>
+        <li><a href="simulador.html" aria-current="page">Simulador</a></li>
+        <li><a href="impacto.html">Impacto</a></li>
+        <li><a href="reportar.html">Reportar</a></li>
+        </ul>
+      </nav>
+      <div class="preferencias" role="group" aria-label="Aparência e leitura">
+        <button type="button" class="controle controle-tema" id="btn-tema" role="switch" aria-checked="false" aria-label="Tema claro" title="Alternar entre tema escuro e claro">
+          <svg class="ic ic-sol" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="ic ic-lua" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+        </button>
+        <button type="button" class="controle" id="btn-contraste" aria-pressed="false" aria-label="Alto contraste" title="Alto contraste">
+          <svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+        </button>
+        <button type="button" class="controle controle-a" id="btn-fonte-menos" aria-label="Diminuir texto" title="Diminuir texto"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 19 9 5l6 14M5.2 14h7.6"/><path d="M17.5 8h4"/></svg></button>
+        <button type="button" class="controle controle-a" id="btn-fonte-mais" aria-label="Aumentar texto" title="Aumentar texto"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 19 9 5l6 14M5.2 14h7.6"/><path d="M17.5 8h4M19.5 6v4"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <div class="cabecalho-pagina cab-simulador">
+      <div class="container cab-grade">
+        <div>
+        <h1>Simulador: o que muda quando o semáforo se adapta</h1>
+        <p>Ligue o SmartFlow, compare o atraso em cada corredor e calcule quantas horas você recupera por ano.</p>
+      </div>
+      </div>
+    </div>
+
+    <section class="secao" aria-labelledby="t-corredores">
+      <div class="container">
+        <p class="aviso-dados"><strong>Dados ilustrativos.</strong> Os valores desta página servem para demonstrar a simulação. Não são medições oficiais. Números reais dependem de um piloto com a CET.</p>
+
+        <div class="sim-grade">
+          <div class="painel">
+            <h2 id="t-corredores">Corredores de São Paulo</h2>
+
+            <div class="controles">
+              <div class="campo">
+                <label for="filtro-regiao">Região</label>
+                <select id="filtro-regiao">
+                  <option value="todas">Todas as regiões</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="ordenacao">Ordenar por</label>
+                <select id="ordenacao">
+                  <option value="atraso">Maior atraso hoje</option>
+                  <option value="ganho">Maior redução com o SmartFlow</option>
+                  <option value="nome">Nome da avenida</option>
+                </select>
+              </div>
+            </div>
+
+            <p>
+              <button type="button" class="chave" id="chave-smartflow" role="switch" aria-checked="false">
+                <span class="chave-trilho" aria-hidden="true"><span class="chave-bola"></span></span>
+                <span id="chave-texto">SmartFlow desligado</span>
+              </button>
+            </p>
+
+            <p class="resumo" id="resumo-tabela" role="status" aria-live="polite"></p>
+
+            <table class="tabela-corredores">
+              <caption id="legenda-tabela"></caption>
+              <thead>
+                <tr>
+                  <th scope="col">Corredor</th>
+                  <th scope="col">Região</th>
+                  <th scope="col">Atraso por viagem hoje</th>
+                  <th scope="col">Atraso com o SmartFlow</th>
+                  <th scope="col">Redução</th>
+                </tr>
+              </thead>
+              <tbody id="corpo-tabela"></tbody>
+            </table>
+          </div>
+
+          <div class="painel" aria-labelledby="t-trajeto">
+            <h2 id="t-trajeto">Meu trajeto</h2>
+            <p>Escolha a avenida que você mais usa e veja o efeito no seu ano.</p>
+
+            <div class="campo">
+              <label for="trajeto-corredor">Avenida</label>
+              <select id="trajeto-corredor"></select>
+            </div>
+            <div class="campo">
+              <label for="trajeto-viagens">Viagens por dia</label>
+              <input type="number" id="trajeto-viagens" value="2" min="1" max="6" step="1" inputmode="numeric" aria-describedby="erro-viagens">
+              <p class="erro" id="erro-viagens" role="alert"></p>
+            </div>
+            <div class="campo">
+              <label for="trajeto-dias">Dias por semana</label>
+              <input type="number" id="trajeto-dias" value="5" min="1" max="7" step="1" inputmode="numeric" aria-describedby="erro-dias">
+              <p class="erro" id="erro-dias" role="alert"></p>
+            </div>
+
+            <div class="resultado-trajeto" id="resultado-trajeto" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-clara" aria-labelledby="t-comparar">
+      <div class="container">
+        <h2 id="t-comparar" class="secao-titulo">Compare dois trajetos</h2>
+        <p class="comp-intro">Escolha duas avenidas e veja quantas horas por ano cada uma custa hoje e com o SmartFlow. As viagens por dia e os dias por semana são os do campo "Meu trajeto", acima.</p>
+        <div class="comp-campos">
+          <div class="campo">
+            <label for="comp-a">Trajeto A</label>
+            <select id="comp-a"></select>
+          </div>
+          <div class="campo">
+            <label for="comp-b">Trajeto B</label>
+            <select id="comp-b"></select>
+          </div>
+        </div>
+        <div class="comp-resultado" id="comp-resultado" role="status" aria-live="polite"></div>
+        <div class="grupo-botoes">
+          <button type="button" class="botao botao-escuro" id="btn-copiar">Copiar resultado</button>
+          <span class="comp-aviso" id="copiar-aviso" role="status"></span>
+        </div>
+        <p class="aviso-dados"><strong>Dados ilustrativos.</strong> A comparação usa os atrasos e ganhos de demonstração do protótipo.</p>
+      </div>
+    </section>
+    <section class="faixa-foto" aria-label="Foto de uma avenida de São Paulo">
+      <img src="../img/fotos/sp-avenida-arvores.webp" alt="Avenida de várias faixas em São Paulo, vista do alto, com carros entre fileiras de árvores." width="1600" height="893" loading="lazy">
+      <p>Cada semáforo decide quanto tempo a avenida inteira espera.</p>
+    </section>
+
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-interno">
+      <p>SmartFlow é um protótipo acadêmico da Global Solution 2026/2 da FIAP, tema CitizenTech.<br>Os dados do simulador são ilustrativos.</p>
+      <ul class="rodape-links">
+        <li><a href="impacto.html#fontes">Fontes e créditos</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
