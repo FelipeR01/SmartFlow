@@ -15,7 +15,8 @@ O SmartFlow é uma proposta para quem se desloca todos os dias em São Paulo, pr
 
 Não precisa instalar nada. Abra o arquivo `index.html` em qualquer navegador (dois cliques).
 
-Site publicado: **COLE AQUI O LINK DO GITHUB PAGES OU VERCEL**
+Site publicado: **https://smart-flow-nine-alpha.vercel.app**  
+Código: **https://github.com/FelipeR01/SmartFlow**
 
 ## Páginas
 
