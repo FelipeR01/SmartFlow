@@ -73,6 +73,7 @@ Os corredores, atrasos e percentuais de redução do Simulador e do Impacto (`js
 - **Ferramenta:** Claude (Anthropic).
 - **Para quê:** leitura e organização dos requisitos, planejamento, rascunho do código e dos textos, e testes automatizados de acessibilidade e de funcionamento.
 - **Como foi usada:** o resultado foi revisado e testado pelo grupo antes da entrega.
+- **Vídeo pitch:** a narração foi gerada por IA de texto para voz (Piper, voz pt_BR "faber", código aberto), a partir de um roteiro escrito com apoio do Claude e revisado pelo grupo. A edição foi feita com Remotion. As imagens do vídeo são as mesmas fotos e vídeos de uso livre listados em "Imagens e vídeo", mais o vídeo aéreo de João Pavese (Pexels) no fechamento.
 
 ## Origem do projeto e créditos
 
