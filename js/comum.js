@@ -77,8 +77,8 @@
       v.setAttribute("tabindex", "-1");
       v.muted = true; v.loop = true; v.playsInline = true;
       v.setAttribute("disablepictureinpicture", "");
-      v.poster = BASE + "img/fotos/hero-poster.jpg";
-      if (!reduzir) { v.autoplay = true; v.preload = "auto"; v.src = BASE + "img/fotos/avenida-aerea.mp4"; } else { v.preload = "none"; }
+      v.poster = BASE + "img/fotos/video-skyline.jpg";
+      if (!reduzir) { v.autoplay = true; v.preload = "auto"; v.src = BASE + "img/fotos/video-skyline.mp4"; } else { v.preload = "none"; }
       document.body.insertBefore(v, document.body.firstChild);
     }
     if (!reduzir) { const p = v.play(); if (p && p.catch) { p.catch(function () {}); } }

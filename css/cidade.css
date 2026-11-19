@@ -138,10 +138,10 @@ html[data-contraste="alto"] .btn-video { display: none; }
 }
 .cabecalho-pagina > .container { position: relative; z-index: 1; }
 .cabecalho-pagina p { color: var(--sobre-escuro-2); font-size: 1.15rem; max-width: 52ch; }
-.cab-solucao { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.6)), url("../img/fotos/camera-faria-lima.webp"); }
-.cab-simulador { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.55)), url("../img/fotos/avenida-dia.jpg"); }
-.cab-impacto { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.55)), url("../img/fotos/paulista-noite.webp"); }
-.cab-reportar { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.55)), url("../img/fotos/hero-poster.jpg"); }
+.cab-solucao { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.6)), url("../img/fotos/cab-solucao.webp"); }
+.cab-simulador { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.55)), url("../img/fotos/cab-simulador.webp"); }
+.cab-impacto { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.55)), url("../img/fotos/cab-impacto.webp"); }
+.cab-reportar { background-image: linear-gradient(to right, rgba(3,6,10,0.95), rgba(3,6,10,0.55)), url("../img/fotos/cab-reportar.webp"); }
 html[data-contraste="alto"] .cabecalho-pagina { background-image: none; border-bottom-color: var(--borda-suave); }
 
 /* Linha de sinal no pé do topo: uma luz percorre a linha, como um pulso na via */

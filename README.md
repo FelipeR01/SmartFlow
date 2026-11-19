@@ -79,20 +79,29 @@ Este protótipo é uma evolução do projeto SmartFlow do próprio grupo, public
 
 ## Imagens e vídeo
 
-Reaproveitados do protótipo anterior do grupo (repositório SmartFlow, agosto de 2026), em versões otimizadas:
+Cada foto e vídeo aparece uma única vez no site. As imagens de terceiros têm licença livre (Unsplash, Pexels ou Creative Commons) e foram recortadas e comprimidas para a web.
 
-| Arquivo | Uso | Origem |
+| Arquivo | Onde aparece | Autor e licença |
 |---|---|---|
-| `img/fotos/paulista-noite.webp` | foto da Av. Paulista à noite | PREENCHER (autor/site/licença) |
-| `img/fotos/sp-paulista-entardecer.webp`, `sp-estaiada-noite.webp`, `sp-viaduto-lentidao.webp` | imagens de São Paulo (Paulista, ponte Estaiada e viaduto) enviadas pelo grupo | PREENCHER (origem; se foram geradas com IA, escreva isso aqui) |
-| `img/fotos/camera-faria-lima.webp` | imagem de câmera de monitoramento urbano | PREENCHER (fonte da imagem) |
-| `img/fotos/avenida-aerea.mp4`, `hero-poster.jpg`, `avenida-dia.jpg` | vídeo aéreo de avenida e quadros dele | PREENCHER (como foi produzido/obtido) |
+| `img/fotos/video-marginal.mp4` (+ `.jpg`) | vídeo da capa (Início) | João Pavese, Pexels (licença Pexels) |
+| `img/fotos/video-paulista.mp4` (+ `.jpg`) | demonstração de câmera (Solução) | Luiz Valerio Trindade, Pexels (licença Pexels) |
+| `img/fotos/video-skyline.mp4` (+ `.jpg`) | fundo das páginas internas | Zinho Santos, Pexels (licença Pexels) |
+| `img/fotos/sp-marginal-lentidao.webp` | foto do problema (Início) | Mariordo, Wikimedia Commons (CC BY-SA 3.0) |
+| `img/fotos/sp-pedestres-faixa.webp` | galeria (Início) | Tutz Dias, Unsplash (licença Unsplash) |
+| `img/fotos/sp-avenida-arvores.webp` | faixa de foto (Simulador) | Bruno Thethe, Unsplash (licença Unsplash) |
+| `img/fotos/sp-onibus-paulista.webp` | "Quem sente a diferença" (Impacto) | Selena Jiménez, Unsplash (licença Unsplash) |
+| `img/fotos/sp-prestes-maia.webp` | foto ao lado dos reportes (Reportar) | maria roberta castilho, Unsplash (licença Unsplash) |
+| `img/fotos/cab-solucao.webp` | topo da Solução | Felipe Brayner, Unsplash (licença Unsplash) |
+| `img/fotos/cab-simulador.webp` | topo do Simulador | Vitor Mendes Stafusa, Unsplash (licença Unsplash) |
+| `img/fotos/cab-impacto.webp` | topo do Impacto | Maick Maciel, Unsplash (licença Unsplash) |
+| `img/fotos/cab-reportar.webp` | topo do Reportar | Daniel Granja, Unsplash (licença Unsplash) |
+| `img/fotos/sp-estaiada-noite.webp`, `sp-viaduto-lentidao.webp`, `sp-paulista-entardecer.webp` | galeria (Início) e Impacto | enviadas pelo grupo. PREENCHER (origem; se foram geradas com IA, escreva isso aqui) |
+| `img/fotos/camera-faria-lima.webp` | imagem de câmera (Solução) | do protótipo anterior do grupo. PREENCHER (fonte da imagem) |
 
 Movimento: entrada dos blocos ao rolar, barras que crescem, faixa de tráfego animada e diagrama animado na Solução, tudo em CSS e JavaScript puros (`js/movimento.js`). Quem ativa "reduzir movimento" no sistema vê a página sem animações.
 
 O vídeo da página inicial tem botão "Pausar vídeo" e fica parado para quem pede movimento reduzido no sistema.
 
-As fotos `foto-*.webp` são recortes das fotos acima, usados em outras páginas.
 
 ## Fontes tipográficas
 
