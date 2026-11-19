@@ -66,7 +66,7 @@ Os corredores, atrasos e percentuais de redução do Simulador e do Impacto (`js
 
 ## Vídeo pitch
 
-**COLE AQUI O LINK PÚBLICO DO VÍDEO (YouTube, Google Drive ou Vimeo)**
+**https://www.youtube.com/watch?v=V1sUC54Y8jo**
 
 ## Uso de IA generativa
 
