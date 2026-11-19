@@ -97,8 +97,8 @@ Cada foto e vídeo aparece uma única vez no site. As imagens de terceiros têm 
 | `img/fotos/cab-simulador.webp` | topo do Simulador | Vitor Mendes Stafusa, Unsplash (licença Unsplash) |
 | `img/fotos/cab-impacto.webp` | topo do Impacto | Maick Maciel, Unsplash (licença Unsplash) |
 | `img/fotos/cab-reportar.webp` | topo do Reportar | Daniel Granja, Unsplash (licença Unsplash) |
-| `img/fotos/sp-estaiada-noite.webp`, `sp-viaduto-lentidao.webp`, `sp-paulista-entardecer.webp` | galeria (Início) e Impacto | enviadas pelo grupo. PREENCHER (origem; se foram geradas com IA, escreva isso aqui) |
-| `img/fotos/camera-faria-lima.webp` | imagem de câmera (Solução) | do protótipo anterior do grupo. PREENCHER (fonte da imagem) |
+| `img/fotos/sp-estaiada-noite.webp`, `sp-viaduto-lentidao.webp`, `sp-paulista-entardecer.webp` | galeria (Início) e Impacto | fornecidas pelo grupo |
+| `img/fotos/camera-faria-lima.webp` | imagem de câmera (Solução) | do protótipo anterior do grupo (agosto de 2026) |
 
 Movimento: entrada dos blocos ao rolar, barras que crescem, faixa de tráfego animada e diagrama animado na Solução, tudo em CSS e JavaScript puros (`js/movimento.js`). Quem ativa "reduzir movimento" no sistema vê a página sem animações.
 
