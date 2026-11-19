@@ -58,11 +58,11 @@ Os corredores, atrasos e percentuais de redução do Simulador e do Impacto (`js
 
 | Nome | RM |
 |---|---|
-| Nicholas de Freitas Araujo | PREENCHER |
-| Luiz Felipe Carvalho Matos | PREENCHER |
-| Paulo José | PREENCHER (sobrenome completo) |
-| Guilherme Matias dos Santos | PREENCHER |
-| Felipe Rodrigues da Silva | PREENCHER |
+| Nicholas de Freitas Araujo | RM573712 |
+| Luiz Felipe Carvalho Matos | RM572964 |
+| Paulo José Agustavo Rocha Fonseca | RM570734 |
+| Guilherme Matias dos Santos | RM570788 |
+| Felipe Rodrigues da Silva | RM571100 |
 
 ## Vídeo pitch
 
