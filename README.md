@@ -57,7 +57,11 @@ Os corredores, atrasos e percentuais de redução do Simulador e do Impacto (`js
 
 | Nome | RM |
 |---|---|
-| Felipe Rodrigues da Silva | RM a informar |
+| Nicholas de Freitas Araujo | PREENCHER |
+| Luiz Felipe Carvalho Matos | PREENCHER |
+| Paulo José | PREENCHER (sobrenome completo) |
+| Guilherme Matias dos Santos | PREENCHER |
+| Felipe Rodrigues da Silva | PREENCHER |
 
 ## Vídeo pitch
 
@@ -80,6 +84,7 @@ Reaproveitados do protótipo anterior do grupo (repositório SmartFlow, agosto d
 | Arquivo | Uso | Origem |
 |---|---|---|
 | `img/fotos/paulista-noite.webp` | foto da Av. Paulista à noite | PREENCHER (autor/site/licença) |
+| `img/fotos/sp-paulista-entardecer.webp`, `sp-estaiada-noite.webp`, `sp-viaduto-lentidao.webp` | imagens de São Paulo (Paulista, ponte Estaiada e viaduto) enviadas pelo grupo | PREENCHER (origem; se foram geradas com IA, escreva isso aqui) |
 | `img/fotos/camera-faria-lima.webp` | imagem de câmera de monitoramento urbano | PREENCHER (fonte da imagem) |
 | `img/fotos/avenida-aerea.mp4`, `hero-poster.jpg`, `avenida-dia.jpg` | vídeo aéreo de avenida e quadros dele | PREENCHER (como foi produzido/obtido) |
 
